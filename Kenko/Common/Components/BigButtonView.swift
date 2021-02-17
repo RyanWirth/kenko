@@ -18,7 +18,7 @@ struct BigButtonView: View {
                 .foregroundColor(.white)
                 .tracking(2.0)
                 .frame(width: 208, height: 64)
-                .background(Color.accentColor)
+                .background(Colors.secondary400)
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingAdviceView: View {
     var body: some View {
         VStack {
-            Image("OnboardingAdviceView")
+            Image("OnboardingAdviceImage")
 
             Text("Want Our Advice?")
                 .font(Fonts.title3)
