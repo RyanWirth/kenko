@@ -18,7 +18,7 @@ struct BigSecondaryButtonView: View {
                 .font(Fonts.buttonTitle)
                 .foregroundColor(color)
                 .tracking(2.0)
-                .frame(width: 272, height: 64)
+                .padding(EdgeInsets(top: 23, leading: 24, bottom: 23, trailing: 24))
             
         }
     }

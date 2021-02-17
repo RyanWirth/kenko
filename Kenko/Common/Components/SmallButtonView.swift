@@ -17,7 +17,7 @@ struct SmallButtonView: View {
                 .font(Fonts.buttonTitle)
                 .foregroundColor(.white)
                 .tracking(2.0)
-                .frame(width: 148, height: 46)
+                .padding(EdgeInsets(top: 13, leading: 44, bottom: 13, trailing: 44))
                 .background(Colors.primary400)
         }
     }
