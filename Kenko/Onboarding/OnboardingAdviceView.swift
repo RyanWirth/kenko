@@ -20,7 +20,7 @@ struct OnboardingAdviceView: View {
                 .multilineTextAlignment(.center)
         
             BigButtonView(title: "LET’S DO IT") {}
-            SmallButtonView(title: "START") {}
+            BigSecondaryButtonView(title: "DO IT LATER", color: Colors.secondary500) {}
         }
     }
 }

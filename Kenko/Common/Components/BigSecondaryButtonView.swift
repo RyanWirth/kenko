@@ -9,13 +9,14 @@ import SwiftUI
 
 struct BigSecondaryButtonView: View {
     let title: String
+    var color = Colors.primary400
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             Text(title)
                 .font(Fonts.buttonTitle)
-                .foregroundColor(Colors.primary400)
+                .foregroundColor(color)
                 .tracking(2.0)
                 .frame(width: 272, height: 64)
             
