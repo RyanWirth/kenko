@@ -10,7 +10,10 @@ import SwiftUI
 struct OnboardingAdviceView: View {
     var body: some View {
         VStack {
+            Spacer()
+            
             Image("OnboardingAdviceImage")
+                .padding(.bottom, 48)
 
             VStack(spacing: 8) {
                 Text("Want Our Advice?")
@@ -23,10 +26,15 @@ struct OnboardingAdviceView: View {
                     .frame(maxWidth: 300)
             }
             
+            Spacer()
+            Spacer()
+            
             VStack(spacing: 16) {
                 BigButtonView(title: "LET’S DO IT") {}
                 BigSecondaryButtonView(title: "DO IT LATER", color: Colors.secondary500) {}
             }
+            
+            Spacer()
         }
     }
 }
