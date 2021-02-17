@@ -18,6 +18,8 @@ struct OnboardingAdviceView: View {
             Text("To give you the best experience, we'd like to ask a few questions to get everything set up for you.")
                 .font(Fonts.body)
                 .multilineTextAlignment(.center)
+        
+            BigButtonView(title: "LET’S DO IT") {}
         }
     }
 }

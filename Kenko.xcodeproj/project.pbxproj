@@ -14,6 +14,7 @@
 		444DA00425DCD8F700675AF8 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FFA25DCD8F600675AF8 /* Rubik-Regular.ttf */; };
 		444DA00725DCD8F700675AF8 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */; };
 		444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA00B25DCDA9A00675AF8 /* Fonts.swift */; };
+		444DA01A25DCDE7D00675AF8 /* BigButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA01925DCDE7D00675AF8 /* BigButtonView.swift */; };
 		448EAB8525DA35330081CAC8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EAB8425DA35330081CAC8 /* MainView.swift */; };
 		44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */; };
 		44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D825D9F1B000D9E7AB /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 		444D9FFA25DCD8F600675AF8 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		444DA00B25DCDA9A00675AF8 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		444DA01925DCDE7D00675AF8 /* BigButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonView.swift; sourceTree = "<group>"; };
 		448EAB8425DA35330081CAC8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		44B7B6D325D9F1B000D9E7AB /* Kenko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kenko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenkoApp.swift; sourceTree = "<group>"; };
@@ -68,24 +70,41 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		444D9FF125DCD85000675AF8 /* Styles */ = {
+		444D9FF125DCD85000675AF8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				444D9FF225DCD8A600675AF8 /* Fonts */,
-			);
-			path = Styles;
-			sourceTree = "<group>";
-		};
-		444D9FF225DCD8A600675AF8 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				444DA00B25DCDA9A00675AF8 /* Fonts.swift */,
+				44B7B6DA25D9F1B200D9E7AB /* Assets.xcassets */,
 				444D9FF325DCD8BA00675AF8 /* Questrial-Regular.ttf */,
 				444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */,
 				444D9FF625DCD8F600675AF8 /* Rubik-Medium.ttf */,
 				444D9FFA25DCD8F600675AF8 /* Rubik-Regular.ttf */,
 			);
-			path = Fonts;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		444DA01625DCDE2100675AF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				444DA01825DCDE5C00675AF8 /* Components */,
+				444DA01725DCDE3600675AF8 /* Styles */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		444DA01725DCDE3600675AF8 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				444DA00B25DCDA9A00675AF8 /* Fonts.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		444DA01825DCDE5C00675AF8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				444DA01925DCDE7D00675AF8 /* BigButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		44B7B6CA25D9F1B000D9E7AB = {
@@ -108,9 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				444D9FE925DCD23400675AF8 /* App */,
+				444DA01625DCDE2100675AF8 /* Common */,
 				444D9FEA25DCD24400675AF8 /* Onboarding */,
-				444D9FF125DCD85000675AF8 /* Styles */,
-				44B7B6DA25D9F1B200D9E7AB /* Assets.xcassets */,
+				444D9FF125DCD85000675AF8 /* Assets */,
 				44B7B6DF25D9F1B200D9E7AB /* Info.plist */,
 				44B7B6DC25D9F1B200D9E7AB /* Preview Content */,
 			);
@@ -199,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */,
+				444DA01A25DCDE7D00675AF8 /* BigButtonView.swift in Sources */,
 				444D9FEC25DCD2AF00675AF8 /* OnboardingView.swift in Sources */,
 				448EAB8525DA35330081CAC8 /* MainView.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
