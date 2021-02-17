@@ -11,15 +11,9 @@
 		444D9FEF25DCD47200675AF8 /* OnboardingAdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444D9FEE25DCD47200675AF8 /* OnboardingAdviceView.swift */; };
 		444D9FF425DCD8BA00675AF8 /* Questrial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FF325DCD8BA00675AF8 /* Questrial-Regular.ttf */; };
 		444DA00025DCD8F700675AF8 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FF625DCD8F600675AF8 /* Rubik-Medium.ttf */; };
-		444DA00125DCD8F700675AF8 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FF725DCD8F600675AF8 /* Rubik-Bold.ttf */; };
-		444DA00225DCD8F700675AF8 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FF825DCD8F600675AF8 /* Rubik-Black.ttf */; };
-		444DA00325DCD8F700675AF8 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FF925DCD8F600675AF8 /* Rubik-BlackItalic.ttf */; };
 		444DA00425DCD8F700675AF8 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FFA25DCD8F600675AF8 /* Rubik-Regular.ttf */; };
-		444DA00525DCD8F700675AF8 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FFB25DCD8F600675AF8 /* Rubik-Italic.ttf */; };
-		444DA00625DCD8F700675AF8 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FFC25DCD8F600675AF8 /* Rubik-BoldItalic.ttf */; };
 		444DA00725DCD8F700675AF8 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */; };
-		444DA00825DCD8F700675AF8 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FFE25DCD8F700675AF8 /* Rubik-LightItalic.ttf */; };
-		444DA00925DCD8F700675AF8 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444D9FFF25DCD8F700675AF8 /* Rubik-MediumItalic.ttf */; };
+		444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA00B25DCDA9A00675AF8 /* Fonts.swift */; };
 		448EAB8525DA35330081CAC8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EAB8425DA35330081CAC8 /* MainView.swift */; };
 		44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */; };
 		44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D825D9F1B000D9E7AB /* ContentView.swift */; };
@@ -32,15 +26,9 @@
 		444D9FEE25DCD47200675AF8 /* OnboardingAdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAdviceView.swift; sourceTree = "<group>"; };
 		444D9FF325DCD8BA00675AF8 /* Questrial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Questrial-Regular.ttf"; sourceTree = "<group>"; };
 		444D9FF625DCD8F600675AF8 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		444D9FF725DCD8F600675AF8 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
-		444D9FF825DCD8F600675AF8 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
-		444D9FF925DCD8F600675AF8 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
 		444D9FFA25DCD8F600675AF8 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
-		444D9FFB25DCD8F600675AF8 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
-		444D9FFC25DCD8F600675AF8 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
-		444D9FFE25DCD8F700675AF8 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
-		444D9FFF25DCD8F700675AF8 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		444DA00B25DCDA9A00675AF8 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		448EAB8425DA35330081CAC8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		44B7B6D325D9F1B000D9E7AB /* Kenko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kenko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenkoApp.swift; sourceTree = "<group>"; };
@@ -91,16 +79,10 @@
 		444D9FF225DCD8A600675AF8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				444DA00B25DCDA9A00675AF8 /* Fonts.swift */,
 				444D9FF325DCD8BA00675AF8 /* Questrial-Regular.ttf */,
-				444D9FF825DCD8F600675AF8 /* Rubik-Black.ttf */,
-				444D9FF925DCD8F600675AF8 /* Rubik-BlackItalic.ttf */,
-				444D9FF725DCD8F600675AF8 /* Rubik-Bold.ttf */,
-				444D9FFC25DCD8F600675AF8 /* Rubik-BoldItalic.ttf */,
-				444D9FFB25DCD8F600675AF8 /* Rubik-Italic.ttf */,
 				444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */,
-				444D9FFE25DCD8F700675AF8 /* Rubik-LightItalic.ttf */,
 				444D9FF625DCD8F600675AF8 /* Rubik-Medium.ttf */,
-				444D9FFF25DCD8F700675AF8 /* Rubik-MediumItalic.ttf */,
 				444D9FFA25DCD8F600675AF8 /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
@@ -200,18 +182,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				444DA00225DCD8F700675AF8 /* Rubik-Black.ttf in Resources */,
 				444DA00425DCD8F700675AF8 /* Rubik-Regular.ttf in Resources */,
 				444D9FF425DCD8BA00675AF8 /* Questrial-Regular.ttf in Resources */,
 				44B7B6DE25D9F1B200D9E7AB /* Preview Assets.xcassets in Resources */,
 				44B7B6DB25D9F1B200D9E7AB /* Assets.xcassets in Resources */,
-				444DA00625DCD8F700675AF8 /* Rubik-BoldItalic.ttf in Resources */,
-				444DA00525DCD8F700675AF8 /* Rubik-Italic.ttf in Resources */,
-				444DA00325DCD8F700675AF8 /* Rubik-BlackItalic.ttf in Resources */,
 				444DA00025DCD8F700675AF8 /* Rubik-Medium.ttf in Resources */,
-				444DA00925DCD8F700675AF8 /* Rubik-MediumItalic.ttf in Resources */,
-				444DA00825DCD8F700675AF8 /* Rubik-LightItalic.ttf in Resources */,
-				444DA00125DCD8F700675AF8 /* Rubik-Bold.ttf in Resources */,
 				444DA00725DCD8F700675AF8 /* Rubik-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +202,7 @@
 				444D9FEC25DCD2AF00675AF8 /* OnboardingView.swift in Sources */,
 				448EAB8525DA35330081CAC8 /* MainView.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
+				444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */,
 				444D9FEF25DCD47200675AF8 /* OnboardingAdviceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

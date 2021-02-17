@@ -11,8 +11,13 @@ struct OnboardingAdviceView: View {
     var body: some View {
         VStack {
             Image("OnboardingAdviceView")
+
             Text("Want Our Advice?")
+                .font(Fonts.title3)
+
             Text("To give you the best experience, we'd like to ask a few questions to get everything set up for you.")
+                .font(Fonts.body)
+                .multilineTextAlignment(.center)
         }
     }
 }
