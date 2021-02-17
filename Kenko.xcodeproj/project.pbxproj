@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		444D9FEC25DCD2AF00675AF8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444D9FEB25DCD2AF00675AF8 /* OnboardingView.swift */; };
+		444D9FEF25DCD47200675AF8 /* OnboardingAdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444D9FEE25DCD47200675AF8 /* OnboardingAdviceView.swift */; };
 		448EAB8525DA35330081CAC8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EAB8425DA35330081CAC8 /* MainView.swift */; };
 		44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */; };
 		44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D825D9F1B000D9E7AB /* ContentView.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		444D9FEB25DCD2AF00675AF8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		444D9FEE25DCD47200675AF8 /* OnboardingAdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAdviceView.swift; sourceTree = "<group>"; };
 		448EAB8425DA35330081CAC8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		44B7B6D325D9F1B000D9E7AB /* Kenko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kenko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenkoApp.swift; sourceTree = "<group>"; };
@@ -35,6 +39,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		444D9FE925DCD23400675AF8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */,
+				44B7B6D825D9F1B000D9E7AB /* ContentView.swift */,
+				448EAB8425DA35330081CAC8 /* MainView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		444D9FEA25DCD24400675AF8 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				444D9FEB25DCD2AF00675AF8 /* OnboardingView.swift */,
+				444D9FEE25DCD47200675AF8 /* OnboardingAdviceView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		44B7B6CA25D9F1B000D9E7AB = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +77,11 @@
 		44B7B6D525D9F1B000D9E7AB /* Kenko */ = {
 			isa = PBXGroup;
 			children = (
-				44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */,
-				44B7B6D825D9F1B000D9E7AB /* ContentView.swift */,
+				444D9FEA25DCD24400675AF8 /* Onboarding */,
+				444D9FE925DCD23400675AF8 /* App */,
 				44B7B6DA25D9F1B200D9E7AB /* Assets.xcassets */,
 				44B7B6DF25D9F1B200D9E7AB /* Info.plist */,
 				44B7B6DC25D9F1B200D9E7AB /* Preview Content */,
-				448EAB8425DA35330081CAC8 /* MainView.swift */,
 			);
 			path = Kenko;
 			sourceTree = "<group>";
@@ -142,8 +164,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */,
+				444D9FEC25DCD2AF00675AF8 /* OnboardingView.swift in Sources */,
 				448EAB8525DA35330081CAC8 /* MainView.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
+				444D9FEF25DCD47200675AF8 /* OnboardingAdviceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

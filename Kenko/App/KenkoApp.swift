@@ -11,7 +11,8 @@ import SwiftUI
 struct KenkoApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            // TODO: Replace with MainView
+            OnboardingView()
         }
     }
 }
