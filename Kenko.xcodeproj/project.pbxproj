@@ -69,14 +69,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		444D9FE925DCD23400675AF8 /* App */ = {
+		442A2EC625DDDB2000DAEC4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */,
-				44B7B6D825D9F1B000D9E7AB /* ContentView.swift */,
-				448EAB8425DA35330081CAC8 /* MainView.swift */,
 			);
-			path = App;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		442A2EC725DDDB5000DAEC4B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				444DA01625DCDE2100675AF8 /* Common */,
+				444D9FEA25DCD24400675AF8 /* Onboarding */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		444D9FEA25DCD24400675AF8 /* Onboarding */ = {
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				44B7B6DA25D9F1B200D9E7AB /* Assets.xcassets */,
+				44B7B6DD25D9F1B200D9E7AB /* Preview Assets.xcassets */,
 				444D9FF325DCD8BA00675AF8 /* Questrial-Regular.ttf */,
 				444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */,
 				444D9FF625DCD8F600675AF8 /* Rubik-Medium.ttf */,
@@ -148,23 +155,16 @@
 		44B7B6D525D9F1B000D9E7AB /* Kenko */ = {
 			isa = PBXGroup;
 			children = (
-				444D9FE925DCD23400675AF8 /* App */,
-				444DA01625DCDE2100675AF8 /* Common */,
-				444D9FEA25DCD24400675AF8 /* Onboarding */,
 				444D9FF125DCD85000675AF8 /* Assets */,
-				44B7B6DC25D9F1B200D9E7AB /* Preview Content */,
+				442A2EC625DDDB2000DAEC4B /* Models */,
+				442A2EC725DDDB5000DAEC4B /* Views */,
+				44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */,
+				448EAB8425DA35330081CAC8 /* MainView.swift */,
+				44B7B6D825D9F1B000D9E7AB /* ContentView.swift */,
 				44B7B6DF25D9F1B200D9E7AB /* Info.plist */,
 				442A2EBF25DDD44800DAEC4B /* GoogleService-Info.plist */,
 			);
 			path = Kenko;
-			sourceTree = "<group>";
-		};
-		44B7B6DC25D9F1B200D9E7AB /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				44B7B6DD25D9F1B200D9E7AB /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
