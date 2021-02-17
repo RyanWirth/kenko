@@ -12,15 +12,21 @@ struct OnboardingAdviceView: View {
         VStack {
             Image("OnboardingAdviceImage")
 
-            Text("Want Our Advice?")
-                .font(Fonts.title3)
-
-            Text("To give you the best experience, we'd like to ask a few questions to get everything set up for you.")
-                .font(Fonts.body)
-                .multilineTextAlignment(.center)
-        
-            BigButtonView(title: "LET’S DO IT") {}
-            BigSecondaryButtonView(title: "DO IT LATER", color: Colors.secondary500) {}
+            VStack(spacing: 8) {
+                Text("Want Our Advice?")
+                    .font(Fonts.title3)
+                    .foregroundColor(Colors.secondary500)
+                Text("To give you best experience we would like to ask a few quick questions to set everything up for you.")
+                    .font(Fonts.body)
+                    .foregroundColor(Colors.secondary500)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: 300)
+            }
+            
+            VStack(spacing: 16) {
+                BigButtonView(title: "LET’S DO IT") {}
+                BigSecondaryButtonView(title: "DO IT LATER", color: Colors.secondary500) {}
+            }
         }
     }
 }
