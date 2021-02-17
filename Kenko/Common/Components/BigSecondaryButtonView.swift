@@ -1,5 +1,5 @@
 //
-//  SmallButtonView.swift
+//  BigSecondaryButtonView.swift
 //  Kenko
 //
 //  Created by Ryan Wirth on 2021-02-17.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SmallButtonView: View {
+struct BigSecondaryButtonView: View {
     let title: String
     let action: () -> Void
 
@@ -15,16 +15,16 @@ struct SmallButtonView: View {
         Button(action: action) {
             Text(title)
                 .font(Fonts.buttonTitle)
-                .foregroundColor(.white)
+                .foregroundColor(Colors.primary400)
                 .tracking(2.0)
-                .frame(width: 148, height: 46)
-                .background(Colors.primary400)
+                .frame(width: 272, height: 64)
+            
         }
     }
 }
 
-struct SmallButtonView_Previews: PreviewProvider {
+struct BigSecondaryButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        SmallButtonView(title: "START") {}
+        BigSecondaryButtonView(title: "SIGN UP WITH FACEBOOK") {}
     }
 }
