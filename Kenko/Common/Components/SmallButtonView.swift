@@ -1,13 +1,13 @@
 //
-//  BigButtonView.swift
+//  SmallButtonView.swift
 //  Kenko
 //
-//  Created by Ryan Wirth on 2021-02-16.
+//  Created by Ryan Wirth on 2021-02-17.
 //
 
 import SwiftUI
 
-struct BigButtonView: View {
+struct SmallButtonView: View {
     let title: String
     let action: () -> Void
 
@@ -17,14 +17,14 @@ struct BigButtonView: View {
                 .font(Fonts.buttonTitle)
                 .foregroundColor(.white)
                 .tracking(2.0)
-                .frame(width: 208, height: 64)
-                .background(Colors.secondary400)
+                .frame(width: 150, height: 44)
+                .background(Colors.primary400)
         }
     }
 }
 
-struct BigButtonView_Previews: PreviewProvider {
+struct SmallButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        BigButtonView(title: "LET’S DO IT") {}
+        SmallButtonView(title: "START") {}
     }
 }
