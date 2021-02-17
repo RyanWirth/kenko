@@ -17,6 +17,7 @@
 		444DA01A25DCDE7D00675AF8 /* BigButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA01925DCDE7D00675AF8 /* BigButtonView.swift */; };
 		444DA01E25DCE2D600675AF8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA01D25DCE2D600675AF8 /* Colors.swift */; };
 		444DA02625DD8D5800675AF8 /* SmallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA02525DD8D5800675AF8 /* SmallButtonView.swift */; };
+		444DA02925DD8EC000675AF8 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA02825DD8EC000675AF8 /* Gradients.swift */; };
 		448EAB8525DA35330081CAC8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EAB8425DA35330081CAC8 /* MainView.swift */; };
 		44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */; };
 		44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D825D9F1B000D9E7AB /* ContentView.swift */; };
@@ -35,6 +36,7 @@
 		444DA01925DCDE7D00675AF8 /* BigButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonView.swift; sourceTree = "<group>"; };
 		444DA01D25DCE2D600675AF8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		444DA02525DD8D5800675AF8 /* SmallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButtonView.swift; sourceTree = "<group>"; };
+		444DA02825DD8EC000675AF8 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		448EAB8425DA35330081CAC8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		44B7B6D325D9F1B000D9E7AB /* Kenko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kenko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenkoApp.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				444DA00B25DCDA9A00675AF8 /* Fonts.swift */,
 				444DA01D25DCE2D600675AF8 /* Colors.swift */,
+				444DA02825DD8EC000675AF8 /* Gradients.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				444DA01E25DCE2D600675AF8 /* Colors.swift in Sources */,
 				444DA01A25DCDE7D00675AF8 /* BigButtonView.swift in Sources */,
 				444D9FEC25DCD2AF00675AF8 /* OnboardingView.swift in Sources */,
+				444DA02925DD8EC000675AF8 /* Gradients.swift in Sources */,
 				448EAB8525DA35330081CAC8 /* MainView.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
 				444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */,

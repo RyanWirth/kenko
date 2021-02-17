@@ -18,7 +18,8 @@ struct BigButtonView: View {
                 .foregroundColor(.white)
                 .tracking(2.0)
                 .frame(width: 208, height: 64)
-                .background(Colors.secondary400)
+                .background(LinearGradient(gradient: Gradients.primary, startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+            
         }
     }
 }

@@ -15,10 +15,14 @@ class Colors {
     
     static let secondary100 = Color("Secondary100Color")
     static let secondary200 = Color("Secondary200Color")
+    static let secondary300 = Color("Secondary300Color")
     static let secondary400 = Color("Secondary400Color")
     static let secondary500 = Color("Secondary500Color")
     
     static let tertiary300 = Color("Tertiary300Color")
     static let tertiary400 = Color("Tertiary400Color")
     static let tertiary500 = Color("Tertiary500Color")
+    
+    static let quaternary400 = Color("Quaternary400Color")
+    static let quaternary500 = Color("Quaternary500Color")
 }
