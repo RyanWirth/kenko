@@ -91,6 +91,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4414767B25DE267500340ACE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				444D9FEA25DCD24400675AF8 /* Onboarding */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		442A2EC625DDDB2000DAEC4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				444DA01625DCDE2100675AF8 /* Common */,
-				444D9FEA25DCD24400675AF8 /* Onboarding */,
+				4414767B25DE267500340ACE /* Screens */,
 			);
 			path = Views;
 			sourceTree = "<group>";
