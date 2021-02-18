@@ -10,6 +10,7 @@
 		4414766925DE209E00340ACE /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414766825DE209E00340ACE /* FirestoreRepository.swift */; };
 		4414766D25DE231400340ACE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4414766C25DE231400340ACE /* Resolver */; };
 		4414767025DE236B00340ACE /* Resolver+ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */; };
+		4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414767C25DE269E00340ACE /* OnboardingViewModel.swift */; };
 		442A2EB725DDD40500DAEC4B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 442A2EB625DDD40500DAEC4B /* FirebaseAnalytics */; };
 		442A2EB925DDD40500DAEC4B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 442A2EB825DDD40500DAEC4B /* FirebaseFirestoreSwift-Beta */; };
 		442A2EBB25DDD40500DAEC4B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 442A2EBA25DDD40500DAEC4B /* FirebaseAuth */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		4414766825DE209E00340ACE /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
 		4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+ResolverRegistering.swift"; sourceTree = "<group>"; };
+		4414767C25DE269E00340ACE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		442A2EBF25DDD44800DAEC4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		444D9FEB25DCD2AF00675AF8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		444D9FEE25DCD47200675AF8 /* OnboardingAdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAdviceView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				444D9FEB25DCD2AF00675AF8 /* OnboardingView.swift */,
+				4414767C25DE269E00340ACE /* OnboardingViewModel.swift */,
 				444D9FEE25DCD47200675AF8 /* OnboardingAdviceView.swift */,
 			);
 			path = Onboarding;
@@ -301,6 +304,7 @@
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
 				4493919725DDF7D100A551AF /* ExerciseModel.swift in Sources */,
 				449391A225DE0DF300A551AF /* StaticRepository.swift in Sources */,
+				4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */,
 				444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */,
 				444D9FEF25DCD47200675AF8 /* OnboardingAdviceView.swift in Sources */,
 				4493919425DDF6F800A551AF /* RoutineModel.swift in Sources */,
@@ -443,7 +447,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.ryanwirth.Kenko;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ryanwirth.kenko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -466,7 +470,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.ryanwirth.Kenko;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ryanwirth.kenko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

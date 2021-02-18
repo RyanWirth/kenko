@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @ObservedObject var viewModel = OnboardingViewModel()
+
     var body: some View {
+        Text(viewModel.text)
         OnboardingAdviceView()
     }
 }
