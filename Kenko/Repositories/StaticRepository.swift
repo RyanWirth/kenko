@@ -11,7 +11,7 @@ class StaticRepository: FirestoreRepository, ObservableObject {
     @Published var exercises = ExercisesModel()
     
     override func loadData() {
-        db.document("static/exercises").getDocument { (document, error) in
+        db.collection("static").document("exercises").getDocument { (document, error) in
             print("GOT DOCUMENT")
             print(document)
             
@@ -24,5 +24,27 @@ class StaticRepository: FirestoreRepository, ObservableObject {
     
     func saveData() {
         print("SAVING DATA")
+        
+        let ex1 = ExerciseModel(id: "ex1", name: "Exercise #1", about: "Lorem ipsum dolor sit amet.", equipment: .barbell, muscles: [
+            InvolvedMuscleModel(muscle: .abs, intensity: .primary),
+            InvolvedMuscleModel(muscle: .back, intensity: .secondary)
+        ])
+        
+        let ex2 = ExerciseModel(id: "ex2", name: "Exercise #2", about: "Lorem ipsum dolor sit amet.", equipment: .barbell, muscles: [
+            InvolvedMuscleModel(muscle: .chest, intensity: .primary),
+            InvolvedMuscleModel(muscle: .calves, intensity: .secondary)
+        ])
+        
+        let exs: ExercisesModel = [
+            "ex1": ex1,
+            "ex2": ex2
+        ]
+        
+        do {
+            try db.collection("static").document("exercises").setData(from: exs)
+            print("SET DATA!")
+        } catch {
+            fatalError("Unable to update exercises: \(error.localizedDescription).")
+        }
     }
 }
