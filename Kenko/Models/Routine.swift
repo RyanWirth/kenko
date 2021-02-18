@@ -5,10 +5,8 @@
 //  Created by Ryan Wirth on 2021-02-17.
 //
 
-import SwiftUI
+import Foundation
 
-class Routine: ObservableObject {
-    @Published var name = "Untitled"
-    
-    let id = UUID()
+struct Routine: Codable {
+    var name: String
 }

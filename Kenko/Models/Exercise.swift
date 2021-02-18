@@ -8,8 +8,8 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-struct Exercise: Identifiable, Codable {
-    @DocumentID var id: String?
+struct Exercise: Codable {
+    var id: String
     var name: String
     var about: String
     var equipment: Equipment

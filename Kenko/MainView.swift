@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    var test = StaticRepository()
+    
     var body: some View {
         TabView {
             ContentView()

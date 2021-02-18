@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4414766925DE209E00340ACE /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414766825DE209E00340ACE /* FirestoreRepository.swift */; };
 		442A2EB725DDD40500DAEC4B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 442A2EB625DDD40500DAEC4B /* FirebaseAnalytics */; };
 		442A2EB925DDD40500DAEC4B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 442A2EB825DDD40500DAEC4B /* FirebaseFirestoreSwift-Beta */; };
 		442A2EBB25DDD40500DAEC4B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 442A2EBA25DDD40500DAEC4B /* FirebaseAuth */; };
@@ -29,6 +30,7 @@
 		4493919725DDF7D100A551AF /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493919625DDF7D100A551AF /* Exercise.swift */; };
 		4493919A25DDFE5500A551AF /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493919925DDFE5500A551AF /* Muscle.swift */; };
 		4493919D25DE099700A551AF /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493919C25DE099700A551AF /* Equipment.swift */; };
+		449391A225DE0DF300A551AF /* StaticRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449391A125DE0DF300A551AF /* StaticRepository.swift */; };
 		44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */; };
 		44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D825D9F1B000D9E7AB /* ContentView.swift */; };
 		44B7B6DB25D9F1B200D9E7AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B7B6DA25D9F1B200D9E7AB /* Assets.xcassets */; };
@@ -36,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4414766825DE209E00340ACE /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
 		442A2EBF25DDD44800DAEC4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		444D9FEB25DCD2AF00675AF8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		444D9FEE25DCD47200675AF8 /* OnboardingAdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAdviceView.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		4493919625DDF7D100A551AF /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		4493919925DDFE5500A551AF /* Muscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
 		4493919C25DE099700A551AF /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		449391A125DE0DF300A551AF /* StaticRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticRepository.swift; sourceTree = "<group>"; };
 		44B7B6D325D9F1B000D9E7AB /* Kenko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kenko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenkoApp.swift; sourceTree = "<group>"; };
 		44B7B6D825D9F1B000D9E7AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4414766625DE13A300340ACE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				44B7B6DD25D9F1B200D9E7AB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		442A2EC625DDDB2000DAEC4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				44B7B6DA25D9F1B200D9E7AB /* Assets.xcassets */,
-				44B7B6DD25D9F1B200D9E7AB /* Preview Assets.xcassets */,
 				444D9FF325DCD8BA00675AF8 /* Questrial-Regular.ttf */,
 				444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */,
 				444D9FF625DCD8F600675AF8 /* Rubik-Medium.ttf */,
@@ -148,6 +159,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		4493919F25DE0C9600A551AF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				449391A125DE0DF300A551AF /* StaticRepository.swift */,
+				4414766825DE209E00340ACE /* FirestoreRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		44B7B6CA25D9F1B000D9E7AB = {
 			isa = PBXGroup;
 			children = (
@@ -169,12 +189,14 @@
 			children = (
 				444D9FF125DCD85000675AF8 /* Assets */,
 				442A2EC625DDDB2000DAEC4B /* Models */,
+				4493919F25DE0C9600A551AF /* Repositories */,
 				442A2EC725DDDB5000DAEC4B /* Views */,
 				44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */,
 				448EAB8425DA35330081CAC8 /* MainView.swift */,
 				44B7B6D825D9F1B000D9E7AB /* ContentView.swift */,
 				44B7B6DF25D9F1B200D9E7AB /* Info.plist */,
 				442A2EBF25DDD44800DAEC4B /* GoogleService-Info.plist */,
+				4414766625DE13A300340ACE /* Preview Content */,
 			);
 			path = Kenko;
 			sourceTree = "<group>";
@@ -263,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				444DA02625DD8D5800675AF8 /* SmallButtonView.swift in Sources */,
+				4414766925DE209E00340ACE /* FirestoreRepository.swift in Sources */,
 				447A8F1825DD9409009E5442 /* BigSecondaryButtonView.swift in Sources */,
 				44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */,
 				444DA01E25DCE2D600675AF8 /* Colors.swift in Sources */,
@@ -273,6 +296,7 @@
 				448EAB8525DA35330081CAC8 /* MainView.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
 				4493919725DDF7D100A551AF /* Exercise.swift in Sources */,
+				449391A225DE0DF300A551AF /* StaticRepository.swift in Sources */,
 				444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */,
 				444D9FEF25DCD47200675AF8 /* OnboardingAdviceView.swift in Sources */,
 				4493919425DDF6F800A551AF /* Routine.swift in Sources */,
