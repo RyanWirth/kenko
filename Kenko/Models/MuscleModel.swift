@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum Muscle: String, Codable {
+enum MuscleModel: String, Codable {
     case abs, back, biceps, calves, chest, forearms, glutes, hamstrings, neck, quads, shoulders, traps, triceps
 }
 
-enum Intensity: String, Codable {
+enum IntensityModel: String, Codable {
     case primary, secondary
 }
 
-struct InvolvedMuscle: Codable {
-    let muscle: Muscle
-    let intensity: Intensity
+struct InvolvedMuscleModel: Codable {
+    let muscle: MuscleModel
+    let intensity: IntensityModel
 }

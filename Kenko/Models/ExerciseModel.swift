@@ -8,10 +8,10 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-struct Exercise: Codable {
+struct ExerciseModel: Codable {
     var id: String
     var name: String
     var about: String
-    var equipment: Equipment
-    var muscles: [InvolvedMuscle]
+    var equipment: EquipmentModel
+    var muscles: [InvolvedMuscleModel]
 }

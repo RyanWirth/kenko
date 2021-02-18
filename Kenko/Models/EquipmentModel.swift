@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum Equipment: String, Codable {
+enum EquipmentModel: String, Codable {
     case barbell, dumbbell, cable, bodyweight, hammer, trx, kettlebell
 }
