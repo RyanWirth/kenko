@@ -14,8 +14,7 @@ struct KenkoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            // TODO: Replace with MainView
-            OnboardingView()
+            ContentView()
         }
     }
 }
