@@ -11,9 +11,7 @@ struct OnboardingView: View {
     @ObservedObject var viewModel = OnboardingViewModel()
 
     var body: some View {
-        Button("Hello World!") {
-            viewModel.staticRepository.saveData()
-        }
+        Button("Hello World! \(viewModel.text)") {}
 
         OnboardingAdviceView()
     }

@@ -16,18 +16,9 @@ class OnboardingViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     init() {
-        staticRepository.$exercises.map { test in
-            print("UPDATE")
-            print(test)
-            self.text = "Hello, world!"
-        }
-        
-        //taskRepository.$tasks.map { tasks in
-        //    tasks.map { task in
-        //        TaskCellViewModel(task: task)
-        //    }
-        //}
-        //.assign(to: \.taskCellViewModels, on: self)
-        //.store(in: &cancellables)
+        staticRepository.$exercises
+            .map { "\($0.count)" }
+            .assign(to: \.text, on: self)
+            .store(in: &cancellables)
     }
 }
