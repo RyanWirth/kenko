@@ -15,3 +15,5 @@ struct ExerciseModel: Codable {
     var equipment: EquipmentModel
     var muscles: [InvolvedMuscleModel]
 }
+
+typealias ExercisesModel = [String: ExerciseModel]

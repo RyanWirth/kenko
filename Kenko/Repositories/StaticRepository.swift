@@ -8,12 +8,21 @@
 import Foundation
 
 class StaticRepository: FirestoreRepository, ObservableObject {
-    @Published var exercises = [String: ExerciseModel]()
+    @Published var exercises = ExercisesModel()
     
     override func loadData() {
-        db.document("static/exercises").addSnapshotListener { (snapshot, error) in
-            print("GOT SNAPSHOT")
-            print(snapshot)
+        db.document("static/exercises").getDocument { (document, error) in
+            print("GOT DOCUMENT")
+            print(document)
+            
+            if let exercises = try? document?.data(as: ExercisesModel.self) {
+                print("DECODED EXERCISES")
+                print(exercises)
+            }
         }
+    }
+    
+    func saveData() {
+        print("SAVING DATA")
     }
 }
