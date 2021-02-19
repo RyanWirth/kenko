@@ -12,6 +12,6 @@ struct WeightModel: Codable {
     let units: Units
     
     enum Units: String, Codable {
-        case lb, kg, rpe, orm
+        case exact, rpe, orm
     }
 }
