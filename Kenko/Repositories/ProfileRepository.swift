@@ -7,7 +7,7 @@
 
 import Combine
 import Resolver
-import FirebaseFirestore
+import Firebase
 
 class ProfileRepository: ObservableObject {
     @Injected var authRepository: AuthRepository
@@ -18,8 +18,8 @@ class ProfileRepository: ObservableObject {
     private var listener: ListenerRegistration?
     
     init() {
-        cancellable = authRepository.$user.sink { _ in
-            self.refreshProfile()
+        cancellable = authRepository.$user.sink { user in
+            self.refreshProfile(for: user)
         }
     }
     
@@ -33,14 +33,12 @@ class ProfileRepository: ObservableObject {
         }
     }
     
-    private func refreshProfile() {
+    private func refreshProfile(for user: User?) {
         // Remove the old snapshot listener
         listener?.remove()
         
-        if let uid = authRepository.user?.uid {
+        if let uid = user?.uid {
             loadProfile(for: uid)
-        } else {
-            profile = ProfileModel()
         }
     }
     
@@ -48,8 +46,6 @@ class ProfileRepository: ObservableObject {
         listener = db.collection("profiles").document(uid).addSnapshotListener { snapshot, error in
             if let profile = try? snapshot?.data(as: ProfileModel.self) {
                 self.profile = profile
-            } else {
-                self.profile = ProfileModel()
             }
         }
     }
