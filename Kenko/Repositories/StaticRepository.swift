@@ -5,7 +5,6 @@
 //  Created by Ryan Wirth on 2021-02-17.
 //
 
-import Foundation
 import FirebaseFirestore
 
 class StaticRepository: ObservableObject {
