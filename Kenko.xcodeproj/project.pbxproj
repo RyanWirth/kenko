@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4414766925DE209E00340ACE /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414766825DE209E00340ACE /* FirestoreRepository.swift */; };
 		4414766D25DE231400340ACE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4414766C25DE231400340ACE /* Resolver */; };
 		4414767025DE236B00340ACE /* Resolver+ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */; };
 		4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414767C25DE269E00340ACE /* OnboardingViewModel.swift */; };
@@ -45,7 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4414766825DE209E00340ACE /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
 		4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+ResolverRegistering.swift"; sourceTree = "<group>"; };
 		4414767C25DE269E00340ACE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		4414768225DF365000340ACE /* WeightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightModel.swift; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 				4479408B25E0482600AD547D /* AuthRepository.swift */,
 				4479408725E0449100AD547D /* ProfileRepository.swift */,
 				449391A125DE0DF300A551AF /* StaticRepository.swift */,
-				4414766825DE209E00340ACE /* FirestoreRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 				4479408825E0449100AD547D /* ProfileRepository.swift in Sources */,
 				444DA02625DD8D5800675AF8 /* SmallButtonView.swift in Sources */,
 				4479408525E02AB900AD547D /* ProfileModel.swift in Sources */,
-				4414766925DE209E00340ACE /* FirestoreRepository.swift in Sources */,
 				447A8F1825DD9409009E5442 /* BigSecondaryButtonView.swift in Sources */,
 				44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */,
 				444DA01E25DCE2D600675AF8 /* Colors.swift in Sources */,

@@ -9,13 +9,13 @@ import Foundation
 import Resolver
 import Combine
 
-class ProfileRepository: FirestoreRepository, ObservableObject {
+class ProfileRepository: ObservableObject {
     @Injected var authRepository: AuthRepository
     @Published var profile = ProfileModel()
     
     private var cancellable: AnyCancellable?
     
-    override func loadData() {
+    init() {
         cancellable = authRepository.$user.sink { user in
             self.test(uid: user?.uid)
         }

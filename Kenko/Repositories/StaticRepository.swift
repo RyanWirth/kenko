@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
-class StaticRepository: FirestoreRepository, ObservableObject {
+class StaticRepository: ObservableObject {
     @Published var exercises = ExercisesModel()
     
-    override func loadData() {
-        db.collection("static").document("exercises").getDocument { (document, error) in
+    init() {
+        Firestore.firestore().document("static/exercises").getDocument { (document, error) in
             if let exercises = try? document?.data(as: ExercisesModel.self) {
                 self.exercises = exercises
             }
