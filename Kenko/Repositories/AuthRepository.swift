@@ -9,24 +9,16 @@ import Foundation
 import FirebaseAuth
 
 class AuthRepository: ObservableObject {
-    let auth = Auth.auth()
+    @Published var user: User? = nil
     
     init() {
-        auth.addStateDidChangeListener { (auth, user) in
-            if let user = user {
-                // if we have a user, create a new user model
-                print("Got user: \(user)")
-                print(user.uid)
-            } else {
-                // TODO
-            }
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            self.user = user
         }
     }
     
     func signInAnonymously() {
-        print("SIGNING IN ANONYMOUSLY")
-
-        auth.signInAnonymously() { (authResult, error) in
+        Auth.auth().signInAnonymously() { (authResult, error) in
             // TODO
             print("Signed in anonymously: \(String(describing: authResult))")
         }
