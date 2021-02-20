@@ -31,6 +31,7 @@
 		444DA02925DD8EC000675AF8 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA02825DD8EC000675AF8 /* Gradients.swift */; };
 		4479408525E02AB900AD547D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479408425E02AB800AD547D /* ProfileModel.swift */; };
 		4479408825E0449100AD547D /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479408725E0449100AD547D /* ProfileRepository.swift */; };
+		4479408C25E0482600AD547D /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479408B25E0482600AD547D /* AuthRepository.swift */; };
 		447A8F1825DD9409009E5442 /* BigSecondaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447A8F1725DD9409009E5442 /* BigSecondaryButtonView.swift */; };
 		4493919425DDF6F800A551AF /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493919325DDF6F800A551AF /* RoutineModel.swift */; };
 		4493919725DDF7D100A551AF /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493919625DDF7D100A551AF /* ExerciseModel.swift */; };
@@ -63,6 +64,7 @@
 		444DA02825DD8EC000675AF8 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		4479408425E02AB800AD547D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		4479408725E0449100AD547D /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		4479408B25E0482600AD547D /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		447A8F1725DD9409009E5442 /* BigSecondaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSecondaryButtonView.swift; sourceTree = "<group>"; };
 		4493919325DDF6F800A551AF /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
 		4493919625DDF7D100A551AF /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
@@ -177,8 +179,9 @@
 		4493919F25DE0C9600A551AF /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				449391A125DE0DF300A551AF /* StaticRepository.swift */,
+				4479408B25E0482600AD547D /* AuthRepository.swift */,
 				4479408725E0449100AD547D /* ProfileRepository.swift */,
+				449391A125DE0DF300A551AF /* StaticRepository.swift */,
 				4414766825DE209E00340ACE /* FirestoreRepository.swift */,
 			);
 			path = Repositories;
@@ -314,6 +317,7 @@
 				4414767025DE236B00340ACE /* Resolver+ResolverRegistering.swift in Sources */,
 				444DA01A25DCDE7D00675AF8 /* BigButtonView.swift in Sources */,
 				4414768325DF365000340ACE /* WeightModel.swift in Sources */,
+				4479408C25E0482600AD547D /* AuthRepository.swift in Sources */,
 				4414768625DF36F600340ACE /* RepsModel.swift in Sources */,
 				444D9FEC25DCD2AF00675AF8 /* OnboardingView.swift in Sources */,
 				444DA02925DD8EC000675AF8 /* Gradients.swift in Sources */,

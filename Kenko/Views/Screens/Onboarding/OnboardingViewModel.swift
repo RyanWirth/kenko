@@ -10,6 +10,9 @@ import Combine
 import Resolver
 
 class OnboardingViewModel: ObservableObject {
+    // FIXME
+    @Published var authRepository: AuthRepository = Resolver.resolve()
+    
     @Published var staticRepository: StaticRepository = Resolver.resolve()
     @Published var text = ""
     
@@ -20,5 +23,8 @@ class OnboardingViewModel: ObservableObject {
             .map { "\($0.count)" }
             .assign(to: \.text, on: self)
             .store(in: &cancellables)
+        
+        // FIXME
+        authRepository.signInAnonymously()
     }
 }
