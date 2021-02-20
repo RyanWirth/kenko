@@ -9,7 +9,6 @@ import Foundation
 import FirebaseAuth
 
 class AuthRepository: ObservableObject {
-    @Published var user = 
     let auth = Auth.auth()
     
     init() {
@@ -18,7 +17,6 @@ class AuthRepository: ObservableObject {
                 // if we have a user, create a new user model
                 print("Got user: \(user)")
                 print(user.uid)
-                user.
             } else {
                 // TODO
             }
