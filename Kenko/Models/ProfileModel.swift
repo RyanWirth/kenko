@@ -6,15 +6,13 @@
 //
 
 import Foundation
-import FirebaseFirestoreSwift
 
-struct ProfileModel: Identifiable, Codable {
-    @DocumentID var id: String?
-    var age: Int
-    var weight: Int
-    var height: Int
-    var skill: Skill
-    var units: Units
+struct ProfileModel: Codable {
+    var age = 18
+    var weight = 68
+    var height = 170
+    var skill = Skill.beginner
+    var units = Units.imperial
     
     enum Skill: String, Codable {
         case beginner, intermediate, advanced

@@ -8,4 +8,5 @@
 import Foundation
 
 class ProfileRepository: FirestoreRepository, ObservableObject {
+    @Published var profile = ProfileModel()
 }
