@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @ObservedObject var viewModel = OnboardingViewModel()
+    @StateObject var viewModel = OnboardingViewModel()
 
     var body: some View {
         Button("Hello World! \(viewModel.text)") {}

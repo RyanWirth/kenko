@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ContentViewModel()
+
     var body: some View {
-        OnboardingView()
+        if viewModel.showOnboarding {
+            OnboardingView()
+        } else {
+            Text("Main View")
+        }
     }
 }
 

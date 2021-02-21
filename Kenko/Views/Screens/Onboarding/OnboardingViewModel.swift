@@ -10,15 +10,14 @@ import Combine
 import Resolver
 
 class OnboardingViewModel: ObservableObject {
-    @Injected var staticRepository: StaticRepository
-    
     @Published var text = ""
     
     private var cancellables = Set<AnyCancellable>()
+    @Injected private var profileRepository: ProfileRepository
     
     init() {
-        staticRepository.$exercises
-            .map { "\($0.count)" }
+        profileRepository.$profile
+            .map { "\($0.age)" }
             .assign(to: \.text, on: self)
             .store(in: &cancellables)
     }
