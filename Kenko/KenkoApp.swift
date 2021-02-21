@@ -7,11 +7,15 @@
 
 import SwiftUI
 import Firebase
+import Resolver
 
 @main
 struct KenkoApp: App {
+    @Injected var authRepository: AuthRepository
+
     init() {
         FirebaseApp.configure()
+        authRepository.configure()
     }
     
     var body: some Scene {

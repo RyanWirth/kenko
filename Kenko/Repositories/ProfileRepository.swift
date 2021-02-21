@@ -10,12 +10,12 @@ import Resolver
 import Firebase
 
 class ProfileRepository: ObservableObject {
-    @Injected var authRepository: AuthRepository
     @Published var profile = ProfileModel()
     
     private let db = Firestore.firestore()
     private var cancellable: AnyCancellable?
     private var listener: ListenerRegistration?
+    @Injected private var authRepository: AuthRepository
     
     init() {
         cancellable = authRepository.$user.sink { user in
