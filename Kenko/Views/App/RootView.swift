@@ -12,22 +12,22 @@ struct RootView: View {
         TabView {
             DashboardView()
                 .tabItem {
-                    Label("Dashboard", systemImage: "list.dash")
+                    Label("Dashboard", systemImage: "house.fill")
                 }
             
             StatisticsView()
                 .tabItem {
-                    Label("Stats", systemImage: "list.dash")
+                    Label("Stats", systemImage: "chart.bar.xaxis")
                 }
             
             HistoryView()
                 .tabItem {
-                    Label("History", systemImage: "list.dash")
+                    Label("History", systemImage: "calendar")
                 }
             
             PlansView()
                 .tabItem {
-                    Label("Plans", systemImage: "list.dash")
+                    Label("Plans", systemImage: "text.book.closed.fill")
                 }
         }
     }
