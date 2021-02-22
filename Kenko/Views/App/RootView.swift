@@ -10,25 +10,10 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         TabView {
-            DashboardView()
-                .tabItem {
-                    Label("Dashboard", systemImage: "house.fill")
-                }
-            
-            StatisticsView()
-                .tabItem {
-                    Label("Stats", systemImage: "chart.bar.xaxis")
-                }
-            
-            HistoryView()
-                .tabItem {
-                    Label("History", systemImage: "calendar")
-                }
-            
-            PlansView()
-                .tabItem {
-                    Label("Plans", systemImage: "text.book.closed.fill")
-                }
+            DashboardTab()
+            StatisticsTab()
+            HistoryTab()
+            PlansTab()
         }
     }
 }

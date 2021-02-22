@@ -37,6 +37,11 @@
 		447940A125E32AA700AD547D /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447940A025E32AA700AD547D /* HistoryView.swift */; };
 		447940A425E32ABF00AD547D /* PlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447940A325E32ABF00AD547D /* PlansView.swift */; };
 		447940A725E32AE200AD547D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447940A625E32AE200AD547D /* RootView.swift */; };
+		447940AB25E33F0F00AD547D /* MyWorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447940AA25E33F0F00AD547D /* MyWorkoutsView.swift */; };
+		447940AE25E3497300AD547D /* DashboardTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447940AD25E3497300AD547D /* DashboardTab.swift */; };
+		447940B125E36FC600AD547D /* StatisticsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447940B025E36FC600AD547D /* StatisticsTab.swift */; };
+		447940B425E3700600AD547D /* HistoryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447940B325E3700600AD547D /* HistoryTab.swift */; };
+		447940B825E3703500AD547D /* PlansTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447940B725E3703500AD547D /* PlansTab.swift */; };
 		447A8F1825DD9409009E5442 /* BigSecondaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447A8F1725DD9409009E5442 /* BigSecondaryButtonView.swift */; };
 		4493919425DDF6F800A551AF /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493919325DDF6F800A551AF /* RoutineModel.swift */; };
 		4493919725DDF7D100A551AF /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493919625DDF7D100A551AF /* ExerciseModel.swift */; };
@@ -75,6 +80,11 @@
 		447940A025E32AA700AD547D /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		447940A325E32ABF00AD547D /* PlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansView.swift; sourceTree = "<group>"; };
 		447940A625E32AE200AD547D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		447940AA25E33F0F00AD547D /* MyWorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutsView.swift; sourceTree = "<group>"; };
+		447940AD25E3497300AD547D /* DashboardTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTab.swift; sourceTree = "<group>"; };
+		447940B025E36FC600AD547D /* StatisticsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTab.swift; sourceTree = "<group>"; };
+		447940B325E3700600AD547D /* HistoryTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTab.swift; sourceTree = "<group>"; };
+		447940B725E3703500AD547D /* PlansTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansTab.swift; sourceTree = "<group>"; };
 		447A8F1725DD9409009E5442 /* BigSecondaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSecondaryButtonView.swift; sourceTree = "<group>"; };
 		4493919325DDF6F800A551AF /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
 		4493919625DDF7D100A551AF /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
@@ -204,7 +214,9 @@
 		4479409625E32A0800AD547D /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				447940AD25E3497300AD547D /* DashboardTab.swift */,
 				4479409725E32A2200AD547D /* DashboardView.swift */,
+				447940AA25E33F0F00AD547D /* MyWorkoutsView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -212,6 +224,7 @@
 		4479409A25E32A3200AD547D /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				447940B025E36FC600AD547D /* StatisticsTab.swift */,
 				4479409D25E32A9200AD547D /* StatisticsView.swift */,
 			);
 			path = Statistics;
@@ -220,6 +233,7 @@
 		4479409B25E32A5F00AD547D /* History */ = {
 			isa = PBXGroup;
 			children = (
+				447940B325E3700600AD547D /* HistoryTab.swift */,
 				447940A025E32AA700AD547D /* HistoryView.swift */,
 			);
 			path = History;
@@ -228,6 +242,7 @@
 		4479409C25E32A6E00AD547D /* Plans */ = {
 			isa = PBXGroup;
 			children = (
+				447940B725E3703500AD547D /* PlansTab.swift */,
 				447940A325E32ABF00AD547D /* PlansView.swift */,
 			);
 			path = Plans;
@@ -369,6 +384,7 @@
 				4479409325E324FD00AD547D /* ContentViewModel.swift in Sources */,
 				4479408525E02AB900AD547D /* ProfileModel.swift in Sources */,
 				447A8F1825DD9409009E5442 /* BigSecondaryButtonView.swift in Sources */,
+				447940AE25E3497300AD547D /* DashboardTab.swift in Sources */,
 				44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */,
 				444DA01E25DCE2D600675AF8 /* Colors.swift in Sources */,
 				4493919A25DDFE5500A551AF /* MuscleModel.swift in Sources */,
@@ -380,12 +396,16 @@
 				447940A425E32ABF00AD547D /* PlansView.swift in Sources */,
 				444D9FEC25DCD2AF00675AF8 /* OnboardingView.swift in Sources */,
 				444DA02925DD8EC000675AF8 /* Gradients.swift in Sources */,
+				447940B425E3700600AD547D /* HistoryTab.swift in Sources */,
 				447940A125E32AA700AD547D /* HistoryView.swift in Sources */,
+				447940B825E3703500AD547D /* PlansTab.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
+				447940AB25E33F0F00AD547D /* MyWorkoutsView.swift in Sources */,
 				4493919725DDF7D100A551AF /* ExerciseModel.swift in Sources */,
 				449391A225DE0DF300A551AF /* StaticRepository.swift in Sources */,
 				4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */,
 				444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */,
+				447940B125E36FC600AD547D /* StatisticsTab.swift in Sources */,
 				444D9FEF25DCD47200675AF8 /* OnboardingAdviceView.swift in Sources */,
 				4493919425DDF6F800A551AF /* RoutineModel.swift in Sources */,
 				4493919D25DE099700A551AF /* EquipmentModel.swift in Sources */,

@@ -9,7 +9,10 @@ import SwiftUI
 
 struct DashboardView: View {
     var body: some View {
-        Text("Dashboard View")
+        NavigationLink(destination: MyWorkoutsView()) {
+            Text("Show All Workouts")
+        }
+        .navigationBarTitle("Dashboard")
     }
 }
 
