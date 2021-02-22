@@ -10,7 +10,7 @@ import SwiftUI
 struct MyWorkoutsView: View {
     var body: some View {
         Text("Showing my workouts...")
-            .navigationBarTitle("My Workouts")
+            .navigationTitle("My Workouts")
     }
 }
 

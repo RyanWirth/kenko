@@ -12,7 +12,7 @@ struct DashboardView: View {
         NavigationLink(destination: MyWorkoutsView()) {
             Text("Show All Workouts")
         }
-        .navigationBarTitle("Dashboard")
+        .navigationTitle("Dashboard")
     }
 }
 
