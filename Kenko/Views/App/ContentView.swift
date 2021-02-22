@@ -14,7 +14,7 @@ struct ContentView: View {
         if viewModel.showOnboarding {
             OnboardingView()
         } else {
-            Text("Main View")
+            RootView()
         }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import Resolver
 
 class ContentViewModel: ObservableObject {
-    @Published var showOnboarding = true
+    @Published var showOnboarding = false
     @Injected private var authRepository: AuthRepository
     
     init() {
