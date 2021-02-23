@@ -11,7 +11,6 @@ struct PlansView: View {
     var body: some View {
         Text("Plans View")
             .navigationTitle("Plans & Routines")
-            .navigationSubtitle("Test")
     }
 }
 
