@@ -28,6 +28,7 @@
 		444DA01E25DCE2D600675AF8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA01D25DCE2D600675AF8 /* Colors.swift */; };
 		444DA02625DD8D5800675AF8 /* SmallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA02525DD8D5800675AF8 /* SmallButtonView.swift */; };
 		444DA02925DD8EC000675AF8 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DA02825DD8EC000675AF8 /* Gradients.swift */; };
+		4472C4DE25EAFC4B00CF15E3 /* ExerciseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4472C4DD25EAFC4B00CF15E3 /* ExerciseDetailsView.swift */; };
 		4479408525E02AB900AD547D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479408425E02AB800AD547D /* ProfileModel.swift */; };
 		4479408825E0449100AD547D /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479408725E0449100AD547D /* ProfileRepository.swift */; };
 		4479408C25E0482600AD547D /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479408B25E0482600AD547D /* AuthRepository.swift */; };
@@ -71,6 +72,7 @@
 		444DA01D25DCE2D600675AF8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		444DA02525DD8D5800675AF8 /* SmallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButtonView.swift; sourceTree = "<group>"; };
 		444DA02825DD8EC000675AF8 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
+		4472C4DD25EAFC4B00CF15E3 /* ExerciseDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsView.swift; sourceTree = "<group>"; };
 		4479408425E02AB800AD547D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		4479408725E0449100AD547D /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		4479408B25E0482600AD547D /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				4479409A25E32A3200AD547D /* Statistics */,
 				4479409B25E32A5F00AD547D /* History */,
 				4479409C25E32A6E00AD547D /* Plans */,
+				4472C4DC25EAFC3400CF15E3 /* ExerciseDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -199,6 +202,14 @@
 				444DA02825DD8EC000675AF8 /* Gradients.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		4472C4DC25EAFC3400CF15E3 /* ExerciseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4472C4DD25EAFC4B00CF15E3 /* ExerciseDetailsView.swift */,
+			);
+			path = ExerciseDetails;
 			sourceTree = "<group>";
 		};
 		4479409125E324C800AD547D /* App */ = {
@@ -401,6 +412,7 @@
 				447940B825E3703500AD547D /* PlansTab.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
 				447940AB25E33F0F00AD547D /* MyWorkoutsView.swift in Sources */,
+				4472C4DE25EAFC4B00CF15E3 /* ExerciseDetailsView.swift in Sources */,
 				4493919725DDF7D100A551AF /* ExerciseModel.swift in Sources */,
 				449391A225DE0DF300A551AF /* StaticRepository.swift in Sources */,
 				4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */,

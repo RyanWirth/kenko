@@ -9,8 +9,14 @@ import SwiftUI
 
 struct DashboardView: View {
     var body: some View {
-        NavigationLink(destination: MyWorkoutsView()) {
-            Text("Show All Workouts")
+        VStack {
+            NavigationLink(destination: MyWorkoutsView()) {
+                Text("Show All Workouts")
+            }
+            
+            NavigationLink(destination: ExerciseDetailsView()) {
+                Text("Show Exercise Details")
+            }
         }
         .navigationTitle("Dashboard")
     }
