@@ -9,16 +9,12 @@ import Foundation
 import FirebaseAuth
 
 class AuthRepository: ObservableObject {
-    @Published var user: User?
+    @Published var user = Auth.auth().currentUser
     
-    func configure() {
-        // Listen to changes in the user state
+    init() {
         Auth.auth().addStateDidChangeListener { (auth, user) in
             self.user = user
         }
-        
-        // TODO: Handle upgraded accounts here
-        signInAnonymously()
     }
     
     func signInAnonymously() {

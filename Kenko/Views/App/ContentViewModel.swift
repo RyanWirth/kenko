@@ -9,10 +9,11 @@ import Foundation
 import Resolver
 
 class ContentViewModel: ObservableObject {
-    @Published var showOnboarding = false
+    @Published var showOnboarding = true
     @Injected private var authRepository: AuthRepository
     
     init() {
-        authRepository.configure()
+        // If the user isn't signed in, show the onboarding screen
+        showOnboarding = authRepository.user == nil
     }
 }
