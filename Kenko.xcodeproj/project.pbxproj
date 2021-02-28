@@ -182,6 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				44B7B6DA25D9F1B200D9E7AB /* Assets.xcassets */,
+				444DA00B25DCDA9A00675AF8 /* Fonts.swift */,
+				444DA01D25DCE2D600675AF8 /* Colors.swift */,
+				444DA02825DD8EC000675AF8 /* Gradients.swift */,
 				44AEEAB025EB146C00BC6496 /* StyleKit.swift */,
 				444D9FF325DCD8BA00675AF8 /* Questrial-Regular.ttf */,
 				444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */,
@@ -198,16 +201,6 @@
 				44AEEAB625EB239300BC6496 /* Images */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		444DA01725DCDE3600675AF8 /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				444DA00B25DCDA9A00675AF8 /* Fonts.swift */,
-				444DA01D25DCE2D600675AF8 /* Colors.swift */,
-				444DA02825DD8EC000675AF8 /* Gradients.swift */,
-			);
-			path = Styles;
 			sourceTree = "<group>";
 		};
 		4472C4DC25EAFC3400CF15E3 /* ExerciseDetails */ = {
@@ -317,7 +310,6 @@
 				442A2EC625DDDB2000DAEC4B /* Models */,
 				4493919F25DE0C9600A551AF /* Repositories */,
 				442A2EC725DDDB5000DAEC4B /* Views */,
-				444DA01725DCDE3600675AF8 /* Styles */,
 				44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */,
 				4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */,
 				44B7B6DF25D9F1B200D9E7AB /* Info.plist */,
