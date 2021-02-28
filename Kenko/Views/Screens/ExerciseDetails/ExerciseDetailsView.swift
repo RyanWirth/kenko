@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExerciseDetailsView: View {
-    var items = (0..<100).map { i in Item(id: "\(i)") }
+    var items = (0..<3000).map { i in Item(id: "\(i)") }
     
     struct Item: Identifiable {
         var id: String
