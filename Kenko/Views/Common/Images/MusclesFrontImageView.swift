@@ -9,10 +9,13 @@ import SwiftUI
 
 struct MusclesFrontImageView: View {
     @Binding var musclesModel: MusclesModel
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     var offset: CGFloat?
     
     var body: some View {
         Image(uiImage: Images.musclesFrontImage(of: musclesModel, with: offset))
+            .id(colorScheme)
     }
 }
 
