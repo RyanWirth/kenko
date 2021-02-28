@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		440ADEBA25EC11EB006601D7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440ADEB925EC11EB006601D7 /* Images.swift */; };
+		440ADEBF25EC13E5006601D7 /* UIImage+Cropping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440ADEBE25EC13E5006601D7 /* UIImage+Cropping.swift */; };
 		4414766D25DE231400340ACE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4414766C25DE231400340ACE /* Resolver */; };
 		4414767025DE236B00340ACE /* Resolver+ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */; };
 		4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414767C25DE269E00340ACE /* OnboardingViewModel.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		440ADEB925EC11EB006601D7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		440ADEBE25EC13E5006601D7 /* UIImage+Cropping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Cropping.swift"; sourceTree = "<group>"; };
 		4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+ResolverRegistering.swift"; sourceTree = "<group>"; };
 		4414767C25DE269E00340ACE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		4414768225DF365000340ACE /* WeightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightModel.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440ADEBD25EC13C8006601D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				440ADEBE25EC13E5006601D7 /* UIImage+Cropping.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4414766625DE13A300340ACE /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +326,7 @@
 				442A2EC625DDDB2000DAEC4B /* Models */,
 				4493919F25DE0C9600A551AF /* Repositories */,
 				442A2EC725DDDB5000DAEC4B /* Views */,
+				440ADEBD25EC13C8006601D7 /* Extensions */,
 				44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */,
 				4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */,
 				44B7B6DF25D9F1B200D9E7AB /* Info.plist */,
@@ -443,6 +454,7 @@
 				449391A225DE0DF300A551AF /* StaticRepository.swift in Sources */,
 				4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */,
 				444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */,
+				440ADEBF25EC13E5006601D7 /* UIImage+Cropping.swift in Sources */,
 				44AEEAB125EB146C00BC6496 /* StyleKit.swift in Sources */,
 				447940B125E36FC600AD547D /* StatisticsTab.swift in Sources */,
 				44AEEAC025EB68F000BC6496 /* MusclesIconImageView.swift in Sources */,
