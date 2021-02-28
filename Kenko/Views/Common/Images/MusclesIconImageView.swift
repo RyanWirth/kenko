@@ -11,7 +11,15 @@ struct MusclesIconImageView: View {
     @Binding var musclesModel: MusclesModel
     
     var body: some View {
-        MusclesFrontImageView(musclesModel: $musclesModel)
+        if musclesModel.first.side == .front {
+            MusclesFrontImageView(musclesModel: $musclesModel)
+                .frame(width: 128, height: 128, alignment: musclesModel.first.alignment)
+                .clipped()
+        } else {
+            MusclesBackImageView(musclesModel: $musclesModel)
+                .frame(width: 128, height: 128, alignment: musclesModel.first.alignment)
+                .clipped()
+        }
     }
 }
 

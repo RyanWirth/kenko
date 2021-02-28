@@ -8,24 +8,52 @@
 import SwiftUI
 
 struct MusclesModel: Codable {
-    private var values: [MuscleModel: IntensityModel]
+    private var data: [MuscleModel: IntensityModel]
     
-    init(_ values: [MuscleModel: IntensityModel]) {
-        self.values = values
+    init(_ data: [MuscleModel: IntensityModel]) {
+        self.data = data
+    }
+    
+    var first: MuscleModel {
+        return data.keys.first ?? .chest
     }
     
     subscript(muscle: MuscleModel) -> IntensityModel {
         get {
-            return values[muscle] ?? .none
+            return data[muscle] ?? .none
         }
         set {
-            values[muscle] = newValue
+            data[muscle] = newValue
         }
     }
 }
 
 enum MuscleModel: String, Codable {
     case abs, biceps, calves, chest, forearms, glutes, hamstrings, lats, lowerBack, quadriceps, shoulders, traps, triceps, upperBack
+    
+    var side: Side {
+        switch self {
+        case .biceps, .chest, .shoulders, .abs, .forearms, .quadriceps:
+            return .front
+        case .lats, .traps, .triceps, .upperBack, .glutes, .hamstrings, .lowerBack, .calves:
+            return .back
+        }
+    }
+    
+    var alignment: Alignment {
+        switch self {
+        case .biceps, .chest, .shoulders, .lats, .traps, .triceps, .upperBack:
+            return .top
+        case .abs, .forearms, .glutes, .hamstrings, .lowerBack, .quadriceps:
+            return .center
+        case .calves:
+            return .bottom
+        }
+    }
+    
+    enum Side {
+        case front, back
+    }
 }
 
 enum IntensityModel: String, Codable {
