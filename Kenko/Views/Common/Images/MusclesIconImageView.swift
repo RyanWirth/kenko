@@ -21,8 +21,8 @@ struct MusclesIconImageView_Previews: PreviewProvider {
     static var previews: some View {
         MusclesIconImageView(musclesModel: .constant(
             MusclesModel([
-                .biceps: .heavy,
-                .calves: .light
+                .biceps: .heavy(),
+                .calves: .light()
             ])
         ))
     }

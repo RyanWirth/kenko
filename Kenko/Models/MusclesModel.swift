@@ -14,10 +14,6 @@ struct MusclesModel: Codable {
         self.data = data
     }
     
-    var first: MuscleModel {
-        return data.keys.first ?? .chest
-    }
-    
     subscript(muscle: MuscleModel) -> IntensityModel {
         get {
             return data[muscle] ?? .none

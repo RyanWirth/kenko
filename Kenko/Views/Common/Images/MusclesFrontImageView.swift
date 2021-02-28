@@ -20,8 +20,8 @@ struct MusclesFrontImageView_Previews: PreviewProvider {
     static var previews: some View {
         MusclesFrontImageView(musclesModel: .constant(
             MusclesModel([
-                .abs: .heavy,
-                .chest: .light
+                .abs: .heavy(),
+                .chest: .light()
             ])
         ))
     }
