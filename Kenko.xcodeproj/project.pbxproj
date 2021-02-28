@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		440ADEBA25EC11EB006601D7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440ADEB925EC11EB006601D7 /* Images.swift */; };
 		440ADEBF25EC13E5006601D7 /* UIImage+Cropping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440ADEBE25EC13E5006601D7 /* UIImage+Cropping.swift */; };
+		440ADEC325EC4282006601D7 /* IntensityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440ADEC225EC4282006601D7 /* IntensityModel.swift */; };
 		4414766D25DE231400340ACE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4414766C25DE231400340ACE /* Resolver */; };
 		4414767025DE236B00340ACE /* Resolver+ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */; };
 		4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414767C25DE269E00340ACE /* OnboardingViewModel.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		440ADEB925EC11EB006601D7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		440ADEBE25EC13E5006601D7 /* UIImage+Cropping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Cropping.swift"; sourceTree = "<group>"; };
+		440ADEC225EC4282006601D7 /* IntensityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntensityModel.swift; sourceTree = "<group>"; };
 		4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+ResolverRegistering.swift"; sourceTree = "<group>"; };
 		4414767C25DE269E00340ACE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		4414768225DF365000340ACE /* WeightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightModel.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				4414768225DF365000340ACE /* WeightModel.swift */,
 				4414768525DF36F600340ACE /* RepsModel.swift */,
 				4479408425E02AB800AD547D /* ProfileModel.swift */,
+				440ADEC225EC4282006601D7 /* IntensityModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				447940B425E3700600AD547D /* HistoryTab.swift in Sources */,
 				447940A125E32AA700AD547D /* HistoryView.swift in Sources */,
 				447940B825E3703500AD547D /* PlansTab.swift in Sources */,
+				440ADEC325EC4282006601D7 /* IntensityModel.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
 				447940AB25E33F0F00AD547D /* MyWorkoutsView.swift in Sources */,
 				4472C4DE25EAFC4B00CF15E3 /* ExerciseDetailsView.swift in Sources */,
