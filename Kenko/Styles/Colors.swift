@@ -10,6 +10,7 @@ import SwiftUI
 class Colors {
     static let primary100 = Color("Primary100Color")
     static let primary200 = Color("Primary200Color")
+    static let primary300 = Color("Primary300Color")
     static let primary400 = Color("Primary400Color")
     static let primary500 = Color("Primary500Color")
     

@@ -8,28 +8,38 @@
 import SwiftUI
 
 struct MusclesFrontImageView: View {
+    @Binding var involvedMuscles: [InvolvedMuscleModel]
+    
     var body: some View {
         Image(uiImage: StyleKit.imageOfMusclesFrontCanvas(
-            abs: random,
-            biceps: random,
-            calves: random,
-            chest: random,
-            forearms: random,
-            quadriceps: random,
-            shoulders: random
+            abs: colorOf(.abs),
+            biceps: colorOf(.biceps),
+            calves: colorOf(.calves),
+            chest: colorOf(.chest),
+            forearms: colorOf(.forearms),
+            quadriceps: colorOf(.quads),
+            shoulders: colorOf(.shoulders)
         ))
     }
     
-    var random: UIColor {
-        return UIColor(red: .random(in: 0...1),
-                       green: .random(in: 0...1),
-                       blue: .random(in: 0...1),
-                       alpha: 1.0)
+    func colorOf(_ muscle: MuscleModel) -> UIColor {
+        let involvedMuscle = involvedMuscles.first(where: { $0.muscle == muscle })
+        switch involvedMuscle?.intensity {
+        case .primary:
+            return UIColor(Colors.primary300)
+        case .secondary:
+            return UIColor(Colors.primary200)
+        default:
+            return UIColor(Colors.primary100)
+        }
     }
 }
 
 struct MusclesFrontImageView_Previews: PreviewProvider {
     static var previews: some View {
-        MusclesFrontImageView()
+        MusclesFrontImageView(involvedMuscles: .constant([
+            InvolvedMuscleModel(muscle: .abs, intensity: .primary),
+            InvolvedMuscleModel(muscle: .chest, intensity: .secondary)
+        ]))
     }
 }

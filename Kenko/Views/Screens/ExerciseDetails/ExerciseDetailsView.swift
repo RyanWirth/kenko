@@ -13,10 +13,12 @@ struct ExerciseDetailsView: View {
     struct Item: Identifiable {
         var id: String
     }
-
+    
     var body: some View {
         List(items) { item in
-            MusclesFrontImageView()
+            MusclesFrontImageView(involvedMuscles: .constant([
+                InvolvedMuscleModel(muscle: .chest, intensity: .primary)
+            ]))
         }
         .navigationTitle("Bench Press")
     }
