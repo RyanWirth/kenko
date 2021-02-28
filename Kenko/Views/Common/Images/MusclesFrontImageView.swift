@@ -9,9 +9,10 @@ import SwiftUI
 
 struct MusclesFrontImageView: View {
     @Binding var musclesModel: MusclesModel
+    var offset: Binding<CGFloat>?
     
     var body: some View {
-        Image(uiImage: Images.musclesFrontImage(of: musclesModel))
+        Image(uiImage: Images.musclesFrontImage(of: musclesModel, with: offset?.wrappedValue))
     }
 }
 

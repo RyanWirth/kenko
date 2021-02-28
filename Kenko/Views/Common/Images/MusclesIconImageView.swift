@@ -11,7 +11,9 @@ struct MusclesIconImageView: View {
     @Binding var musclesModel: MusclesModel
     
     var body: some View {
-        Image(uiImage: Images.musclesFrontImage(of: musclesModel).cropping(to: .init(x: 0, y: 100, width: 128, height: 128)))
+        MusclesFrontImageView(musclesModel: $musclesModel, offset: .constant(1))
+            .frame(width: 128, height: 128, alignment: .top)
+            .clipped()
     }
 }
 

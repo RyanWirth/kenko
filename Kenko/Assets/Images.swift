@@ -8,7 +8,7 @@
 import UIKit
 
 class Images {
-    static func musclesFrontImage(of musclesModel: MusclesModel) -> UIImage {
+    static func musclesFrontImage(of musclesModel: MusclesModel, with offset: CGFloat? = nil) -> UIImage {
         return StyleKit.imageOfMusclesFrontCanvas(
             abs: UIColor(musclesModel[.abs].color),
             biceps: UIColor(musclesModel[.biceps].color),
@@ -16,11 +16,13 @@ class Images {
             chest: UIColor(musclesModel[.chest].color),
             forearms: UIColor(musclesModel[.forearms].color),
             quadriceps: UIColor(musclesModel[.quadriceps].color),
-            shoulders: UIColor(musclesModel[.shoulders].color)
+            shoulders: UIColor(musclesModel[.shoulders].color),
+            offset: offset ?? 1,
+            isIcon: offset != nil
         )
     }
     
-    static func musclesBackImage(of musclesModel: MusclesModel) -> UIImage {
+    static func musclesBackImage(of musclesModel: MusclesModel, with offset: CGFloat? = nil) -> UIImage {
         return StyleKit.imageOfMusclesBackCanvas(
             calves: UIColor(musclesModel[.calves].color),
             forearms: UIColor(musclesModel[.forearms].color),
@@ -31,7 +33,9 @@ class Images {
             shoulders: UIColor(musclesModel[.shoulders].color),
             traps: UIColor(musclesModel[.traps].color),
             triceps: UIColor(musclesModel[.triceps].color),
-            upperBack: UIColor(musclesModel[.upperBack].color)
+            upperBack: UIColor(musclesModel[.upperBack].color),
+            offset: offset ?? 1,
+            isIcon: offset != nil
         )
     }
 }
