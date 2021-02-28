@@ -26,4 +26,15 @@ class Colors {
     
     static let quaternary400 = Color("Quaternary400Color")
     static let quaternary500 = Color("Quaternary500Color")
+    
+    static func of(_ intensityModel: IntensityModel) -> Color {
+        switch intensityModel {
+        case .heavy:
+            return primary300
+        case .light:
+            return primary200
+        case .none:
+            return primary100
+        }
+    }
 }

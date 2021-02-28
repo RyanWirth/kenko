@@ -34,15 +34,4 @@ enum MuscleModel: String, Codable {
 
 enum IntensityModel: String, Codable {
     case heavy, light, none
-    
-    var color: Color {
-        switch self {
-        case .heavy:
-            return Colors.primary300
-        case .light:
-            return Colors.primary200
-        case .none:
-            return Colors.primary100
-        }
-    }
 }

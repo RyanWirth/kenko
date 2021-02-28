@@ -10,13 +10,13 @@ import UIKit
 class Images {
     static func musclesFrontImage(of musclesModel: MusclesModel, with offset: CGFloat? = nil) -> UIImage {
         return StyleKit.imageOfMusclesFrontCanvas(
-            abs: UIColor(musclesModel[.abs].color),
-            biceps: UIColor(musclesModel[.biceps].color),
-            calves: UIColor(musclesModel[.calves].color),
-            chest: UIColor(musclesModel[.chest].color),
-            forearms: UIColor(musclesModel[.forearms].color),
-            quadriceps: UIColor(musclesModel[.quadriceps].color),
-            shoulders: UIColor(musclesModel[.shoulders].color),
+            abs: UIColor(Colors.of(musclesModel[.abs])),
+            biceps: UIColor(Colors.of(musclesModel[.biceps])),
+            calves: UIColor(Colors.of(musclesModel[.calves])),
+            chest: UIColor(Colors.of(musclesModel[.chest])),
+            forearms: UIColor(Colors.of(musclesModel[.forearms])),
+            quadriceps: UIColor(Colors.of(musclesModel[.quadriceps])),
+            shoulders: UIColor(Colors.of(musclesModel[.shoulders])),
             offset: offset ?? 1,
             isIcon: offset != nil
         )
@@ -24,16 +24,16 @@ class Images {
     
     static func musclesBackImage(of musclesModel: MusclesModel, with offset: CGFloat? = nil) -> UIImage {
         return StyleKit.imageOfMusclesBackCanvas(
-            calves: UIColor(musclesModel[.calves].color),
-            forearms: UIColor(musclesModel[.forearms].color),
-            glutes: UIColor(musclesModel[.glutes].color),
-            hamstrings: UIColor(musclesModel[.hamstrings].color),
-            lats: UIColor(musclesModel[.lats].color),
-            lowerBack: UIColor(musclesModel[.lowerBack].color),
-            shoulders: UIColor(musclesModel[.shoulders].color),
-            traps: UIColor(musclesModel[.traps].color),
-            triceps: UIColor(musclesModel[.triceps].color),
-            upperBack: UIColor(musclesModel[.upperBack].color),
+            calves: UIColor(Colors.of(musclesModel[.calves])),
+            forearms: UIColor(Colors.of(musclesModel[.forearms])),
+            glutes: UIColor(Colors.of(musclesModel[.glutes])),
+            hamstrings: UIColor(Colors.of(musclesModel[.hamstrings])),
+            lats: UIColor(Colors.of(musclesModel[.lats])),
+            lowerBack: UIColor(Colors.of(musclesModel[.lowerBack])),
+            shoulders: UIColor(Colors.of(musclesModel[.shoulders])),
+            traps: UIColor(Colors.of(musclesModel[.traps])),
+            triceps: UIColor(Colors.of(musclesModel[.triceps])),
+            upperBack: UIColor(Colors.of(musclesModel[.upperBack])),
             offset: offset ?? 1,
             isIcon: offset != nil
         )
