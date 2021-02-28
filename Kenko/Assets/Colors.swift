@@ -8,6 +8,8 @@
 import SwiftUI
 
 class Colors {
+    static let background = Color("BackgroundColor")
+
     static let primary100 = Color("Primary100Color")
     static let primary200 = Color("Primary200Color")
     static let primary300 = Color("Primary300Color")

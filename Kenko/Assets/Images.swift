@@ -17,6 +17,7 @@ class Images {
             forearms: UIColor(Colors.of(musclesModel[.forearms])),
             quadriceps: UIColor(Colors.of(musclesModel[.quadriceps])),
             shoulders: UIColor(Colors.of(musclesModel[.shoulders])),
+            background: UIColor(Colors.background),
             offset: offset ?? 1,
             isIcon: offset != nil
         )
@@ -34,6 +35,7 @@ class Images {
             traps: UIColor(Colors.of(musclesModel[.traps])),
             triceps: UIColor(Colors.of(musclesModel[.triceps])),
             upperBack: UIColor(Colors.of(musclesModel[.upperBack])),
+            background: UIColor(Colors.background),
             offset: offset ?? 1,
             isIcon: offset != nil
         )
