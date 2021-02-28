@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ExerciseDetailsView: View {
-    var items = (0..<3000).map { i in Item(id: "\(i)") }
+    var items = (0..<3000).map { i in Item(id: i) }
     
     struct Item: Identifiable {
-        var id: String
+        var id: Int
     }
     
     var body: some View {
         List(items) { item in
             MusclesFrontImageView(musclesModel: .constant(
                 MusclesModel([
-                    .chest: .heavy,
+                    .chest: item.id % 2 == 0 ? .heavy : .light,
                     .quadriceps: .light
                 ])
             ))
