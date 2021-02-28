@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExerciseDetailsView: View {
     var body: some View {
-        Image(uiImage: StyleKit.imageOfMusclesBackCanvas)
+        Image(uiImage: StyleKit.imageOfMusclesFrontCanvas())
             .navigationTitle("Bench Press")
     }
 }

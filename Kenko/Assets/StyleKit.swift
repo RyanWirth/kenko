@@ -5,24 +5,14 @@
 //  Created by Ryan Wirth on 2021-02-27.
 //  Copyright © 2021 Ryan Wirth. All rights reserved.
 //
-//
 
 import UIKit
 
 public class StyleKit : NSObject {
 
-    //// Cache
-
-    private struct Cache {
-        static var imageOfMusclesBackCanvas: UIImage?
-        static var musclesBackCanvasTargets: [AnyObject]?
-        static var imageOfMusclesFrontCanvas: UIImage?
-        static var musclesFrontCanvasTargets: [AnyObject]?
-    }
-
     //// Drawing Methods
 
-    @objc dynamic public class func drawMusclesBackCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 317), resizing: ResizingBehavior = .aspectFit) {
+    @objc dynamic public class func drawMusclesBackCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 317), resizing: ResizingBehavior = .aspectFit, calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), glutes: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), hamstrings: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lats: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lowerBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), traps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), triceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), upperBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -34,9 +24,8 @@ public class StyleKit : NSObject {
 
 
         //// Color Declarations
-        let fillColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
-        let fillColor2 = UIColor(red: 0.737, green: 0.769, blue: 1.000, alpha: 1.000)
-        let strokeColor = UIColor(red: 0.208, green: 0.243, blue: 0.510, alpha: 1.000)
+        let baseFill = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
+        let baseStroke = UIColor(red: 0.208, green: 0.243, blue: 0.510, alpha: 1.000)
 
         //// fill
         //// Fill-1 Drawing
@@ -161,7 +150,7 @@ public class StyleKit : NSObject {
         fill1Path.addCurve(to: CGPoint(x: 126.4, y: 170.36), controlPoint1: CGPoint(x: 120.37, y: 181.06), controlPoint2: CGPoint(x: 129.19, y: 177.28))
         fill1Path.close()
         fill1Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill1Path.fill()
 
 
@@ -177,7 +166,7 @@ public class StyleKit : NSObject {
         fill4Path.addCurve(to: CGPoint(x: 38.04, y: 135.27), controlPoint1: CGPoint(x: 47.94, y: 130.87), controlPoint2: CGPoint(x: 42.38, y: 132.8))
         fill4Path.close()
         fill4Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        glutes.setFill()
         fill4Path.fill()
 
 
@@ -193,7 +182,7 @@ public class StyleKit : NSObject {
         fill6Path.addCurve(to: CGPoint(x: 38.3, y: 182.48), controlPoint1: CGPoint(x: 43.11, y: 176.69), controlPoint2: CGPoint(x: 40.44, y: 179.06))
         fill6Path.close()
         fill6Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        hamstrings.setFill()
         fill6Path.fill()
 
 
@@ -213,7 +202,7 @@ public class StyleKit : NSObject {
         fill8Path.addCurve(to: CGPoint(x: 59.33, y: 166.87), controlPoint1: CGPoint(x: 60.48, y: 177.35), controlPoint2: CGPoint(x: 58.97, y: 171.24))
         fill8Path.close()
         fill8Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        hamstrings.setFill()
         fill8Path.fill()
 
 
@@ -230,7 +219,7 @@ public class StyleKit : NSObject {
         fill10Path.addCurve(to: CGPoint(x: 48.23, y: 233.54), controlPoint1: CGPoint(x: 49.22, y: 254.58), controlPoint2: CGPoint(x: 48.23, y: 238.5))
         fill10Path.close()
         fill10Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        calves.setFill()
         fill10Path.fill()
 
 
@@ -252,7 +241,7 @@ public class StyleKit : NSObject {
         fill12Path.addCurve(to: CGPoint(x: 56.26, y: 238.44), controlPoint1: CGPoint(x: 59.31, y: 249.67), controlPoint2: CGPoint(x: 56.26, y: 240.89))
         fill12Path.close()
         fill12Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        calves.setFill()
         fill12Path.fill()
 
 
@@ -267,7 +256,7 @@ public class StyleKit : NSObject {
         fill14Path.addCurve(to: CGPoint(x: 33.53, y: 57.95), controlPoint1: CGPoint(x: 42.89, y: 64.66), controlPoint2: CGPoint(x: 36.51, y: 60.22))
         fill14Path.close()
         fill14Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        shoulders.setFill()
         fill14Path.fill()
 
 
@@ -278,7 +267,7 @@ public class StyleKit : NSObject {
         fill16Path.addCurve(to: CGPoint(x: 21.76, y: 85.27), controlPoint1: CGPoint(x: 21.73, y: 85.13), controlPoint2: CGPoint(x: 21.75, y: 85.2))
         fill16Path.close()
         fill16Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill16Path.fill()
 
 
@@ -289,7 +278,7 @@ public class StyleKit : NSObject {
         fill18Path.addCurve(to: CGPoint(x: 21.83, y: 86), controlPoint1: CGPoint(x: 21.82, y: 86.32), controlPoint2: CGPoint(x: 21.83, y: 86.15))
         fill18Path.close()
         fill18Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill18Path.fill()
 
 
@@ -300,7 +289,7 @@ public class StyleKit : NSObject {
         fill20Path.addCurve(to: CGPoint(x: 21.76, y: 85.28), controlPoint1: CGPoint(x: 21.79, y: 85.41), controlPoint2: CGPoint(x: 21.78, y: 85.34))
         fill20Path.close()
         fill20Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill20Path.fill()
 
 
@@ -311,7 +300,7 @@ public class StyleKit : NSObject {
         fill22Path.addCurve(to: CGPoint(x: 21.82, y: 85.73), controlPoint1: CGPoint(x: 21.83, y: 85.91), controlPoint2: CGPoint(x: 21.83, y: 85.82))
         fill22Path.close()
         fill22Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill22Path.fill()
 
 
@@ -322,7 +311,7 @@ public class StyleKit : NSObject {
         fill24Path.addCurve(to: CGPoint(x: 21.8, y: 85.49), controlPoint1: CGPoint(x: 21.82, y: 85.64), controlPoint2: CGPoint(x: 21.81, y: 85.57))
         fill24Path.close()
         fill24Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill24Path.fill()
 
 
@@ -340,7 +329,7 @@ public class StyleKit : NSObject {
         fill26Path.addCurve(to: CGPoint(x: 21.28, y: 91.48), controlPoint1: CGPoint(x: 29.03, y: 84.28), controlPoint2: CGPoint(x: 24.39, y: 88.08))
         fill26Path.close()
         fill26Path.usesEvenOddFillRule = true
-        fillColor2.setFill()
+        triceps.setFill()
         fill26Path.fill()
 
 
@@ -351,7 +340,7 @@ public class StyleKit : NSObject {
         fill28Path.addCurve(to: CGPoint(x: 21.28, y: 91.46), controlPoint1: CGPoint(x: 21.56, y: 89.12), controlPoint2: CGPoint(x: 21.43, y: 90.2))
         fill28Path.close()
         fill28Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill28Path.fill()
 
 
@@ -362,7 +351,7 @@ public class StyleKit : NSObject {
         fill30Path.addCurve(to: CGPoint(x: 21.76, y: 87.19), controlPoint1: CGPoint(x: 21.79, y: 86.84), controlPoint2: CGPoint(x: 21.78, y: 87.01))
         fill30Path.close()
         fill30Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill30Path.fill()
 
 
@@ -373,7 +362,7 @@ public class StyleKit : NSObject {
         fill32Path.addCurve(to: CGPoint(x: 21.74, y: 87.36), controlPoint1: CGPoint(x: 21.69, y: 87.88), controlPoint2: CGPoint(x: 21.72, y: 87.61))
         fill32Path.close()
         fill32Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill32Path.fill()
 
 
@@ -387,7 +376,7 @@ public class StyleKit : NSObject {
         fill34Path.addCurve(to: CGPoint(x: 9.69, y: 156.3), controlPoint1: CGPoint(x: 15.79, y: 160.65), controlPoint2: CGPoint(x: 10.53, y: 158.19))
         fill34Path.close()
         fill34Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        forearms.setFill()
         fill34Path.fill()
 
 
@@ -401,7 +390,7 @@ public class StyleKit : NSObject {
         fill36Path.addCurve(to: CGPoint(x: 118.26, y: 156.3), controlPoint1: CGPoint(x: 112.16, y: 160.65), controlPoint2: CGPoint(x: 117.41, y: 158.19))
         fill36Path.close()
         fill36Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        forearms.setFill()
         fill36Path.fill()
 
 
@@ -415,7 +404,7 @@ public class StyleKit : NSObject {
         fill38Path.addCurve(to: CGPoint(x: 22.16, y: 139.47), controlPoint1: CGPoint(x: 30.12, y: 126.57), controlPoint2: CGPoint(x: 23.99, y: 133.55))
         fill38Path.close()
         fill38Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        forearms.setFill()
         fill38Path.fill()
 
 
@@ -430,7 +419,7 @@ public class StyleKit : NSObject {
         fill40Path.addCurve(to: CGPoint(x: 50.42, y: 79.34), controlPoint1: CGPoint(x: 51.87, y: 84.81), controlPoint2: CGPoint(x: 51, y: 81.92))
         fill40Path.close()
         fill40Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        upperBack.setFill()
         fill40Path.fill()
 
 
@@ -446,7 +435,7 @@ public class StyleKit : NSObject {
         fill42Path.addCurve(to: CGPoint(x: 52.9, y: 87.77), controlPoint1: CGPoint(x: 58.94, y: 102.2), controlPoint2: CGPoint(x: 55.79, y: 95.96))
         fill42Path.close()
         fill42Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        lats.setFill()
         fill42Path.fill()
 
 
@@ -470,7 +459,7 @@ public class StyleKit : NSObject {
         fill44Path.addCurve(to: CGPoint(x: 59.33, y: 166.87), controlPoint1: CGPoint(x: 59.52, y: 172.33), controlPoint2: CGPoint(x: 59.12, y: 169.33))
         fill44Path.close()
         fill44Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill44Path.fill()
 
 
@@ -486,7 +475,7 @@ public class StyleKit : NSObject {
         fill46Path.addCurve(to: CGPoint(x: 89.91, y: 135.27), controlPoint1: CGPoint(x: 80.01, y: 130.87), controlPoint2: CGPoint(x: 85.57, y: 132.8))
         fill46Path.close()
         fill46Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        glutes.setFill()
         fill46Path.fill()
 
 
@@ -502,7 +491,7 @@ public class StyleKit : NSObject {
         fill48Path.addCurve(to: CGPoint(x: 89.65, y: 182.48), controlPoint1: CGPoint(x: 84.84, y: 176.69), controlPoint2: CGPoint(x: 87.51, y: 179.06))
         fill48Path.close()
         fill48Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        hamstrings.setFill()
         fill48Path.fill()
 
 
@@ -522,7 +511,7 @@ public class StyleKit : NSObject {
         fill50Path.addCurve(to: CGPoint(x: 68.62, y: 166.87), controlPoint1: CGPoint(x: 67.46, y: 177.35), controlPoint2: CGPoint(x: 68.98, y: 171.24))
         fill50Path.close()
         fill50Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        hamstrings.setFill()
         fill50Path.fill()
 
 
@@ -539,7 +528,7 @@ public class StyleKit : NSObject {
         fill52Path.addCurve(to: CGPoint(x: 79.72, y: 233.54), controlPoint1: CGPoint(x: 78.72, y: 254.58), controlPoint2: CGPoint(x: 79.72, y: 238.5))
         fill52Path.close()
         fill52Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        calves.setFill()
         fill52Path.fill()
 
 
@@ -561,7 +550,7 @@ public class StyleKit : NSObject {
         fill54Path.addCurve(to: CGPoint(x: 71.69, y: 238.44), controlPoint1: CGPoint(x: 68.64, y: 249.67), controlPoint2: CGPoint(x: 71.69, y: 240.89))
         fill54Path.close()
         fill54Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        calves.setFill()
         fill54Path.fill()
 
 
@@ -576,7 +565,7 @@ public class StyleKit : NSObject {
         fill56Path.addCurve(to: CGPoint(x: 94.41, y: 57.95), controlPoint1: CGPoint(x: 85.06, y: 64.66), controlPoint2: CGPoint(x: 91.44, y: 60.22))
         fill56Path.close()
         fill56Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        shoulders.setFill()
         fill56Path.fill()
 
 
@@ -587,7 +576,7 @@ public class StyleKit : NSObject {
         fill58Path.addCurve(to: CGPoint(x: 106.18, y: 85.27), controlPoint1: CGPoint(x: 106.21, y: 85.13), controlPoint2: CGPoint(x: 106.2, y: 85.2))
         fill58Path.close()
         fill58Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill58Path.fill()
 
 
@@ -598,7 +587,7 @@ public class StyleKit : NSObject {
         fill60Path.addCurve(to: CGPoint(x: 106.12, y: 86), controlPoint1: CGPoint(x: 106.12, y: 86.32), controlPoint2: CGPoint(x: 106.12, y: 86.15))
         fill60Path.close()
         fill60Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill60Path.fill()
 
 
@@ -609,7 +598,7 @@ public class StyleKit : NSObject {
         fill62Path.addCurve(to: CGPoint(x: 106.18, y: 85.28), controlPoint1: CGPoint(x: 106.16, y: 85.41), controlPoint2: CGPoint(x: 106.17, y: 85.34))
         fill62Path.close()
         fill62Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill62Path.fill()
 
 
@@ -620,7 +609,7 @@ public class StyleKit : NSObject {
         fill64Path.addCurve(to: CGPoint(x: 106.12, y: 85.73), controlPoint1: CGPoint(x: 106.12, y: 85.91), controlPoint2: CGPoint(x: 106.12, y: 85.82))
         fill64Path.close()
         fill64Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill64Path.fill()
 
 
@@ -631,7 +620,7 @@ public class StyleKit : NSObject {
         fill66Path.addCurve(to: CGPoint(x: 106.15, y: 85.49), controlPoint1: CGPoint(x: 106.13, y: 85.64), controlPoint2: CGPoint(x: 106.14, y: 85.57))
         fill66Path.close()
         fill66Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill66Path.fill()
 
 
@@ -649,7 +638,7 @@ public class StyleKit : NSObject {
         fill68Path.addCurve(to: CGPoint(x: 106.67, y: 91.48), controlPoint1: CGPoint(x: 98.92, y: 84.28), controlPoint2: CGPoint(x: 103.55, y: 88.08))
         fill68Path.close()
         fill68Path.usesEvenOddFillRule = true
-        fillColor2.setFill()
+        triceps.setFill()
         fill68Path.fill()
 
 
@@ -660,7 +649,7 @@ public class StyleKit : NSObject {
         fill70Path.addCurve(to: CGPoint(x: 106.66, y: 91.46), controlPoint1: CGPoint(x: 106.39, y: 89.12), controlPoint2: CGPoint(x: 106.52, y: 90.2))
         fill70Path.close()
         fill70Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill70Path.fill()
 
 
@@ -671,7 +660,7 @@ public class StyleKit : NSObject {
         fill72Path.addCurve(to: CGPoint(x: 106.19, y: 87.19), controlPoint1: CGPoint(x: 106.16, y: 86.84), controlPoint2: CGPoint(x: 106.17, y: 87.01))
         fill72Path.close()
         fill72Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill72Path.fill()
 
 
@@ -682,7 +671,7 @@ public class StyleKit : NSObject {
         fill74Path.addCurve(to: CGPoint(x: 106.2, y: 87.36), controlPoint1: CGPoint(x: 106.25, y: 87.88), controlPoint2: CGPoint(x: 106.23, y: 87.61))
         fill74Path.close()
         fill74Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill74Path.fill()
 
 
@@ -696,7 +685,7 @@ public class StyleKit : NSObject {
         fill76Path.addCurve(to: CGPoint(x: 105.79, y: 139.47), controlPoint1: CGPoint(x: 97.83, y: 126.57), controlPoint2: CGPoint(x: 103.96, y: 133.55))
         fill76Path.close()
         fill76Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        forearms.setFill()
         fill76Path.fill()
 
 
@@ -711,7 +700,7 @@ public class StyleKit : NSObject {
         fill78Path.addCurve(to: CGPoint(x: 77.53, y: 79.34), controlPoint1: CGPoint(x: 76.08, y: 84.81), controlPoint2: CGPoint(x: 76.95, y: 81.92))
         fill78Path.close()
         fill78Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        upperBack.setFill()
         fill78Path.fill()
 
 
@@ -730,7 +719,7 @@ public class StyleKit : NSObject {
         fill80Path.addCurve(to: CGPoint(x: 81.32, y: 127.17), controlPoint1: CGPoint(x: 79.72, y: 130.34), controlPoint2: CGPoint(x: 81.32, y: 127.17))
         fill80Path.close()
         fill80Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        lowerBack.setFill()
         fill80Path.fill()
 
 
@@ -746,7 +735,7 @@ public class StyleKit : NSObject {
         fill82Path.addCurve(to: CGPoint(x: 75.04, y: 87.77), controlPoint1: CGPoint(x: 69.01, y: 102.2), controlPoint2: CGPoint(x: 72.16, y: 95.96))
         fill82Path.close()
         fill82Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        lats.setFill()
         fill82Path.fill()
 
 
@@ -770,7 +759,7 @@ public class StyleKit : NSObject {
         fill84Path.addCurve(to: CGPoint(x: 68.62, y: 166.87), controlPoint1: CGPoint(x: 68.42, y: 172.33), controlPoint2: CGPoint(x: 68.82, y: 169.33))
         fill84Path.close()
         fill84Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill84Path.fill()
 
 
@@ -791,7 +780,7 @@ public class StyleKit : NSObject {
         fill86Path.addCurve(to: CGPoint(x: 85.73, y: 55.79), controlPoint1: CGPoint(x: 91.68, y: 56.59), controlPoint2: CGPoint(x: 88.71, y: 55.79))
         fill86Path.close()
         fill86Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        traps.setFill()
         fill86Path.fill()
 
 
@@ -818,7 +807,7 @@ public class StyleKit : NSObject {
         fill88Path.addCurve(to: CGPoint(x: 81.63, y: 21.07), controlPoint1: CGPoint(x: 83.28, y: 22.89), controlPoint2: CGPoint(x: 82.82, y: 21.07))
         fill88Path.close()
         fill88Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill88Path.fill()
 
 
@@ -836,7 +825,7 @@ public class StyleKit : NSObject {
         stroke1Path.addCurve(to: CGPoint(x: 47.94, y: 133.26), controlPoint1: CGPoint(x: 63.97, y: 157.34), controlPoint2: CGPoint(x: 47.94, y: 135.64))
         stroke1Path.addCurve(to: CGPoint(x: 38.04, y: 135.27), controlPoint1: CGPoint(x: 47.94, y: 130.87), controlPoint2: CGPoint(x: 42.38, y: 132.8))
         stroke1Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke1Path.lineWidth = 1.75
         stroke1Path.miterLimit = 4
         stroke1Path.lineJoinStyle = .round
@@ -854,7 +843,7 @@ public class StyleKit : NSObject {
         stroke3Path.addCurve(to: CGPoint(x: 46.63, y: 176.24), controlPoint1: CGPoint(x: 46.5, y: 182.54), controlPoint2: CGPoint(x: 46.63, y: 176.24))
         stroke3Path.addCurve(to: CGPoint(x: 38.3, y: 182.48), controlPoint1: CGPoint(x: 43.11, y: 176.69), controlPoint2: CGPoint(x: 40.44, y: 179.06))
         stroke3Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke3Path.lineWidth = 1.75
         stroke3Path.miterLimit = 4
         stroke3Path.lineJoinStyle = .round
@@ -876,7 +865,7 @@ public class StyleKit : NSObject {
         stroke5Path.addCurve(to: CGPoint(x: 61.88, y: 181.86), controlPoint1: CGPoint(x: 60.28, y: 199.01), controlPoint2: CGPoint(x: 61.15, y: 190.41))
         stroke5Path.addCurve(to: CGPoint(x: 59.33, y: 166.87), controlPoint1: CGPoint(x: 60.48, y: 177.35), controlPoint2: CGPoint(x: 58.97, y: 171.24))
         stroke5Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke5Path.lineWidth = 1.75
         stroke5Path.miterLimit = 4
         stroke5Path.lineJoinStyle = .round
@@ -895,7 +884,7 @@ public class StyleKit : NSObject {
         stroke7Path.addCurve(to: CGPoint(x: 49.62, y: 260.73), controlPoint1: CGPoint(x: 48.95, y: 270.08), controlPoint2: CGPoint(x: 50.02, y: 266.88))
         stroke7Path.addCurve(to: CGPoint(x: 48.23, y: 233.54), controlPoint1: CGPoint(x: 49.22, y: 254.58), controlPoint2: CGPoint(x: 48.23, y: 238.5))
         stroke7Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke7Path.lineWidth = 1.75
         stroke7Path.miterLimit = 4
         stroke7Path.lineJoinStyle = .round
@@ -919,7 +908,7 @@ public class StyleKit : NSObject {
         stroke9Path.addCurve(to: CGPoint(x: 59.31, y: 255.24), controlPoint1: CGPoint(x: 56.52, y: 268.6), controlPoint2: CGPoint(x: 59.31, y: 260.81))
         stroke9Path.addCurve(to: CGPoint(x: 56.26, y: 238.44), controlPoint1: CGPoint(x: 59.31, y: 249.67), controlPoint2: CGPoint(x: 56.26, y: 240.89))
         stroke9Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke9Path.lineWidth = 1.75
         stroke9Path.miterLimit = 4
         stroke9Path.lineJoinStyle = .round
@@ -936,7 +925,7 @@ public class StyleKit : NSObject {
         stroke11Path.addCurve(to: CGPoint(x: 46.49, y: 70.08), controlPoint1: CGPoint(x: 41.86, y: 77.76), controlPoint2: CGPoint(x: 39.79, y: 72.72))
         stroke11Path.addCurve(to: CGPoint(x: 33.53, y: 57.95), controlPoint1: CGPoint(x: 42.89, y: 64.66), controlPoint2: CGPoint(x: 36.51, y: 60.22))
         stroke11Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke11Path.lineWidth = 1.75
         stroke11Path.miterLimit = 4
         stroke11Path.lineJoinStyle = .round
@@ -949,7 +938,7 @@ public class StyleKit : NSObject {
         stroke13Path.addCurve(to: CGPoint(x: 21.72, y: 85.06), controlPoint1: CGPoint(x: 21.75, y: 85.2), controlPoint2: CGPoint(x: 21.73, y: 85.13))
         stroke13Path.addCurve(to: CGPoint(x: 21.76, y: 85.27), controlPoint1: CGPoint(x: 21.73, y: 85.13), controlPoint2: CGPoint(x: 21.75, y: 85.2))
         stroke13Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke13Path.lineWidth = 1.75
         stroke13Path.miterLimit = 4
         stroke13Path.lineJoinStyle = .round
@@ -962,7 +951,7 @@ public class StyleKit : NSObject {
         stroke15Path.addCurve(to: CGPoint(x: 21.81, y: 86.51), controlPoint1: CGPoint(x: 21.83, y: 86.15), controlPoint2: CGPoint(x: 21.82, y: 86.32))
         stroke15Path.addCurve(to: CGPoint(x: 21.83, y: 86), controlPoint1: CGPoint(x: 21.82, y: 86.32), controlPoint2: CGPoint(x: 21.83, y: 86.15))
         stroke15Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke15Path.lineWidth = 1.75
         stroke15Path.miterLimit = 4
         stroke15Path.lineJoinStyle = .round
@@ -975,7 +964,7 @@ public class StyleKit : NSObject {
         stroke17Path.addCurve(to: CGPoint(x: 21.8, y: 85.48), controlPoint1: CGPoint(x: 21.78, y: 85.34), controlPoint2: CGPoint(x: 21.79, y: 85.41))
         stroke17Path.addCurve(to: CGPoint(x: 21.76, y: 85.28), controlPoint1: CGPoint(x: 21.79, y: 85.41), controlPoint2: CGPoint(x: 21.78, y: 85.34))
         stroke17Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke17Path.lineWidth = 1.75
         stroke17Path.miterLimit = 4
         stroke17Path.lineJoinStyle = .round
@@ -988,7 +977,7 @@ public class StyleKit : NSObject {
         stroke19Path.addCurve(to: CGPoint(x: 21.83, y: 86), controlPoint1: CGPoint(x: 21.83, y: 85.82), controlPoint2: CGPoint(x: 21.83, y: 85.91))
         stroke19Path.addCurve(to: CGPoint(x: 21.82, y: 85.73), controlPoint1: CGPoint(x: 21.83, y: 85.91), controlPoint2: CGPoint(x: 21.83, y: 85.82))
         stroke19Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke19Path.lineWidth = 1.75
         stroke19Path.miterLimit = 4
         stroke19Path.lineJoinStyle = .round
@@ -1001,7 +990,7 @@ public class StyleKit : NSObject {
         stroke21Path.addCurve(to: CGPoint(x: 21.82, y: 85.72), controlPoint1: CGPoint(x: 21.81, y: 85.57), controlPoint2: CGPoint(x: 21.82, y: 85.64))
         stroke21Path.addCurve(to: CGPoint(x: 21.8, y: 85.49), controlPoint1: CGPoint(x: 21.82, y: 85.64), controlPoint2: CGPoint(x: 21.81, y: 85.57))
         stroke21Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke21Path.lineWidth = 1.75
         stroke21Path.miterLimit = 4
         stroke21Path.lineJoinStyle = .round
@@ -1021,7 +1010,7 @@ public class StyleKit : NSObject {
         stroke23Path.addCurve(to: CGPoint(x: 33.77, y: 81.63), controlPoint1: CGPoint(x: 37.23, y: 99.29), controlPoint2: CGPoint(x: 36.78, y: 88.98))
         stroke23Path.addCurve(to: CGPoint(x: 21.28, y: 91.48), controlPoint1: CGPoint(x: 29.03, y: 84.28), controlPoint2: CGPoint(x: 24.39, y: 88.08))
         stroke23Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke23Path.lineWidth = 1.75
         stroke23Path.miterLimit = 4
         stroke23Path.lineJoinStyle = .round
@@ -1034,7 +1023,7 @@ public class StyleKit : NSObject {
         stroke25Path.addCurve(to: CGPoint(x: 21.65, y: 88.24), controlPoint1: CGPoint(x: 21.43, y: 90.2), controlPoint2: CGPoint(x: 21.56, y: 89.13))
         stroke25Path.addCurve(to: CGPoint(x: 21.28, y: 91.46), controlPoint1: CGPoint(x: 21.56, y: 89.12), controlPoint2: CGPoint(x: 21.43, y: 90.2))
         stroke25Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke25Path.lineWidth = 1.75
         stroke25Path.miterLimit = 4
         stroke25Path.lineJoinStyle = .round
@@ -1047,7 +1036,7 @@ public class StyleKit : NSObject {
         stroke27Path.addCurve(to: CGPoint(x: 21.8, y: 86.69), controlPoint1: CGPoint(x: 21.78, y: 87.01), controlPoint2: CGPoint(x: 21.79, y: 86.84))
         stroke27Path.addCurve(to: CGPoint(x: 21.76, y: 87.19), controlPoint1: CGPoint(x: 21.79, y: 86.84), controlPoint2: CGPoint(x: 21.78, y: 87.01))
         stroke27Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke27Path.lineWidth = 1.75
         stroke27Path.miterLimit = 4
         stroke27Path.lineJoinStyle = .round
@@ -1060,7 +1049,7 @@ public class StyleKit : NSObject {
         stroke29Path.addCurve(to: CGPoint(x: 21.66, y: 88.17), controlPoint1: CGPoint(x: 21.72, y: 87.61), controlPoint2: CGPoint(x: 21.69, y: 87.88))
         stroke29Path.addCurve(to: CGPoint(x: 21.74, y: 87.36), controlPoint1: CGPoint(x: 21.69, y: 87.88), controlPoint2: CGPoint(x: 21.72, y: 87.61))
         stroke29Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke29Path.lineWidth = 1.75
         stroke29Path.miterLimit = 4
         stroke29Path.lineJoinStyle = .round
@@ -1076,7 +1065,7 @@ public class StyleKit : NSObject {
         stroke31Path.addCurve(to: CGPoint(x: 15.79, y: 160.65), controlPoint1: CGPoint(x: 20.96, y: 143.05), controlPoint2: CGPoint(x: 15.79, y: 160.65))
         stroke31Path.addCurve(to: CGPoint(x: 9.69, y: 156.3), controlPoint1: CGPoint(x: 15.79, y: 160.65), controlPoint2: CGPoint(x: 10.53, y: 158.19))
         stroke31Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke31Path.lineWidth = 1.75
         stroke31Path.miterLimit = 4
         stroke31Path.lineJoinStyle = .round
@@ -1092,7 +1081,7 @@ public class StyleKit : NSObject {
         stroke33Path.addCurve(to: CGPoint(x: 112.16, y: 160.65), controlPoint1: CGPoint(x: 106.98, y: 143.05), controlPoint2: CGPoint(x: 112.16, y: 160.65))
         stroke33Path.addCurve(to: CGPoint(x: 118.26, y: 156.3), controlPoint1: CGPoint(x: 112.16, y: 160.65), controlPoint2: CGPoint(x: 117.41, y: 158.19))
         stroke33Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke33Path.lineWidth = 1.75
         stroke33Path.miterLimit = 4
         stroke33Path.lineJoinStyle = .round
@@ -1108,7 +1097,7 @@ public class StyleKit : NSObject {
         stroke35Path.addCurve(to: CGPoint(x: 32.51, y: 123.8), controlPoint1: CGPoint(x: 27.23, y: 143.42), controlPoint2: CGPoint(x: 32.02, y: 129.15))
         stroke35Path.addCurve(to: CGPoint(x: 22.16, y: 139.47), controlPoint1: CGPoint(x: 30.12, y: 126.57), controlPoint2: CGPoint(x: 23.99, y: 133.55))
         stroke35Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke35Path.lineWidth = 1.75
         stroke35Path.miterLimit = 4
         stroke35Path.lineJoinStyle = .round
@@ -1125,7 +1114,7 @@ public class StyleKit : NSObject {
         stroke37Path.addCurve(to: CGPoint(x: 52.9, y: 87.77), controlPoint1: CGPoint(x: 45.24, y: 89.26), controlPoint2: CGPoint(x: 50.22, y: 89.04))
         stroke37Path.addCurve(to: CGPoint(x: 50.42, y: 79.34), controlPoint1: CGPoint(x: 51.87, y: 84.81), controlPoint2: CGPoint(x: 51, y: 81.92))
         stroke37Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke37Path.lineWidth = 1.75
         stroke37Path.miterLimit = 4
         stroke37Path.lineJoinStyle = .round
@@ -1143,7 +1132,7 @@ public class StyleKit : NSObject {
         stroke39Path.addCurve(to: CGPoint(x: 61.76, y: 107.58), controlPoint1: CGPoint(x: 55.51, y: 116.22), controlPoint2: CGPoint(x: 58.98, y: 112.09))
         stroke39Path.addCurve(to: CGPoint(x: 52.9, y: 87.77), controlPoint1: CGPoint(x: 58.94, y: 102.2), controlPoint2: CGPoint(x: 55.79, y: 95.96))
         stroke39Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke39Path.lineWidth = 1.75
         stroke39Path.miterLimit = 4
         stroke39Path.lineJoinStyle = .round
@@ -1169,7 +1158,7 @@ public class StyleKit : NSObject {
         stroke41Path.addCurve(to: CGPoint(x: 60.15, y: 175.3), controlPoint1: CGPoint(x: 57.4, y: 188.37), controlPoint2: CGPoint(x: 59.19, y: 181.24))
         stroke41Path.addCurve(to: CGPoint(x: 59.33, y: 166.87), controlPoint1: CGPoint(x: 59.52, y: 172.33), controlPoint2: CGPoint(x: 59.12, y: 169.33))
         stroke41Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke41Path.lineWidth = 1.75
         stroke41Path.miterLimit = 4
         stroke41Path.lineJoinStyle = .round
@@ -1187,7 +1176,7 @@ public class StyleKit : NSObject {
         stroke43Path.addCurve(to: CGPoint(x: 80.01, y: 133.26), controlPoint1: CGPoint(x: 63.97, y: 157.34), controlPoint2: CGPoint(x: 80.01, y: 135.64))
         stroke43Path.addCurve(to: CGPoint(x: 89.91, y: 135.27), controlPoint1: CGPoint(x: 80.01, y: 130.87), controlPoint2: CGPoint(x: 85.57, y: 132.8))
         stroke43Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke43Path.lineWidth = 1.75
         stroke43Path.miterLimit = 4
         stroke43Path.lineJoinStyle = .round
@@ -1205,7 +1194,7 @@ public class StyleKit : NSObject {
         stroke45Path.addCurve(to: CGPoint(x: 81.32, y: 176.24), controlPoint1: CGPoint(x: 81.45, y: 182.54), controlPoint2: CGPoint(x: 81.32, y: 176.24))
         stroke45Path.addCurve(to: CGPoint(x: 89.65, y: 182.48), controlPoint1: CGPoint(x: 84.84, y: 176.69), controlPoint2: CGPoint(x: 87.51, y: 179.06))
         stroke45Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke45Path.lineWidth = 1.75
         stroke45Path.miterLimit = 4
         stroke45Path.lineJoinStyle = .round
@@ -1227,7 +1216,7 @@ public class StyleKit : NSObject {
         stroke47Path.addCurve(to: CGPoint(x: 66.07, y: 181.86), controlPoint1: CGPoint(x: 67.66, y: 199.01), controlPoint2: CGPoint(x: 66.8, y: 190.41))
         stroke47Path.addCurve(to: CGPoint(x: 68.62, y: 166.87), controlPoint1: CGPoint(x: 67.46, y: 177.35), controlPoint2: CGPoint(x: 68.98, y: 171.24))
         stroke47Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke47Path.lineWidth = 1.75
         stroke47Path.miterLimit = 4
         stroke47Path.lineJoinStyle = .round
@@ -1246,7 +1235,7 @@ public class StyleKit : NSObject {
         stroke49Path.addCurve(to: CGPoint(x: 78.33, y: 260.73), controlPoint1: CGPoint(x: 79, y: 270.08), controlPoint2: CGPoint(x: 77.93, y: 266.88))
         stroke49Path.addCurve(to: CGPoint(x: 79.72, y: 233.54), controlPoint1: CGPoint(x: 78.72, y: 254.58), controlPoint2: CGPoint(x: 79.72, y: 238.5))
         stroke49Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke49Path.lineWidth = 1.75
         stroke49Path.miterLimit = 4
         stroke49Path.lineJoinStyle = .round
@@ -1270,7 +1259,7 @@ public class StyleKit : NSObject {
         stroke51Path.addCurve(to: CGPoint(x: 68.64, y: 255.24), controlPoint1: CGPoint(x: 71.43, y: 268.6), controlPoint2: CGPoint(x: 68.64, y: 260.81))
         stroke51Path.addCurve(to: CGPoint(x: 71.69, y: 238.44), controlPoint1: CGPoint(x: 68.64, y: 249.67), controlPoint2: CGPoint(x: 71.69, y: 240.89))
         stroke51Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke51Path.lineWidth = 1.75
         stroke51Path.miterLimit = 4
         stroke51Path.lineJoinStyle = .round
@@ -1287,7 +1276,7 @@ public class StyleKit : NSObject {
         stroke53Path.addCurve(to: CGPoint(x: 81.45, y: 70.08), controlPoint1: CGPoint(x: 86.09, y: 77.76), controlPoint2: CGPoint(x: 88.15, y: 72.72))
         stroke53Path.addCurve(to: CGPoint(x: 94.41, y: 57.95), controlPoint1: CGPoint(x: 85.06, y: 64.66), controlPoint2: CGPoint(x: 91.44, y: 60.22))
         stroke53Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke53Path.lineWidth = 1.75
         stroke53Path.miterLimit = 4
         stroke53Path.lineJoinStyle = .round
@@ -1300,7 +1289,7 @@ public class StyleKit : NSObject {
         stroke55Path.addCurve(to: CGPoint(x: 106.23, y: 85.06), controlPoint1: CGPoint(x: 106.2, y: 85.2), controlPoint2: CGPoint(x: 106.21, y: 85.13))
         stroke55Path.addCurve(to: CGPoint(x: 106.18, y: 85.27), controlPoint1: CGPoint(x: 106.21, y: 85.13), controlPoint2: CGPoint(x: 106.2, y: 85.2))
         stroke55Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke55Path.lineWidth = 1.75
         stroke55Path.miterLimit = 4
         stroke55Path.lineJoinStyle = .round
@@ -1313,7 +1302,7 @@ public class StyleKit : NSObject {
         stroke57Path.addCurve(to: CGPoint(x: 106.13, y: 86.51), controlPoint1: CGPoint(x: 106.12, y: 86.15), controlPoint2: CGPoint(x: 106.12, y: 86.32))
         stroke57Path.addCurve(to: CGPoint(x: 106.12, y: 86), controlPoint1: CGPoint(x: 106.12, y: 86.32), controlPoint2: CGPoint(x: 106.12, y: 86.15))
         stroke57Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke57Path.lineWidth = 1.75
         stroke57Path.miterLimit = 4
         stroke57Path.lineJoinStyle = .round
@@ -1326,7 +1315,7 @@ public class StyleKit : NSObject {
         stroke59Path.addCurve(to: CGPoint(x: 106.15, y: 85.48), controlPoint1: CGPoint(x: 106.17, y: 85.34), controlPoint2: CGPoint(x: 106.16, y: 85.41))
         stroke59Path.addCurve(to: CGPoint(x: 106.18, y: 85.28), controlPoint1: CGPoint(x: 106.16, y: 85.41), controlPoint2: CGPoint(x: 106.17, y: 85.34))
         stroke59Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke59Path.lineWidth = 1.75
         stroke59Path.miterLimit = 4
         stroke59Path.lineJoinStyle = .round
@@ -1339,7 +1328,7 @@ public class StyleKit : NSObject {
         stroke61Path.addCurve(to: CGPoint(x: 106.12, y: 86), controlPoint1: CGPoint(x: 106.12, y: 85.82), controlPoint2: CGPoint(x: 106.12, y: 85.91))
         stroke61Path.addCurve(to: CGPoint(x: 106.12, y: 85.73), controlPoint1: CGPoint(x: 106.12, y: 85.91), controlPoint2: CGPoint(x: 106.12, y: 85.82))
         stroke61Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke61Path.lineWidth = 1.75
         stroke61Path.miterLimit = 4
         stroke61Path.lineJoinStyle = .round
@@ -1352,7 +1341,7 @@ public class StyleKit : NSObject {
         stroke63Path.addCurve(to: CGPoint(x: 106.12, y: 85.72), controlPoint1: CGPoint(x: 106.14, y: 85.57), controlPoint2: CGPoint(x: 106.13, y: 85.64))
         stroke63Path.addCurve(to: CGPoint(x: 106.15, y: 85.49), controlPoint1: CGPoint(x: 106.13, y: 85.64), controlPoint2: CGPoint(x: 106.14, y: 85.57))
         stroke63Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke63Path.lineWidth = 1.75
         stroke63Path.miterLimit = 4
         stroke63Path.lineJoinStyle = .round
@@ -1372,7 +1361,7 @@ public class StyleKit : NSObject {
         stroke65Path.addCurve(to: CGPoint(x: 94.17, y: 81.63), controlPoint1: CGPoint(x: 90.72, y: 99.29), controlPoint2: CGPoint(x: 91.17, y: 88.98))
         stroke65Path.addCurve(to: CGPoint(x: 106.67, y: 91.48), controlPoint1: CGPoint(x: 98.92, y: 84.28), controlPoint2: CGPoint(x: 103.55, y: 88.08))
         stroke65Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke65Path.lineWidth = 1.75
         stroke65Path.miterLimit = 4
         stroke65Path.lineJoinStyle = .round
@@ -1385,7 +1374,7 @@ public class StyleKit : NSObject {
         stroke67Path.addCurve(to: CGPoint(x: 106.29, y: 88.24), controlPoint1: CGPoint(x: 106.52, y: 90.2), controlPoint2: CGPoint(x: 106.39, y: 89.13))
         stroke67Path.addCurve(to: CGPoint(x: 106.66, y: 91.46), controlPoint1: CGPoint(x: 106.39, y: 89.12), controlPoint2: CGPoint(x: 106.52, y: 90.2))
         stroke67Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke67Path.lineWidth = 1.75
         stroke67Path.miterLimit = 4
         stroke67Path.lineJoinStyle = .round
@@ -1398,7 +1387,7 @@ public class StyleKit : NSObject {
         stroke69Path.addCurve(to: CGPoint(x: 106.15, y: 86.69), controlPoint1: CGPoint(x: 106.17, y: 87.01), controlPoint2: CGPoint(x: 106.16, y: 86.84))
         stroke69Path.addCurve(to: CGPoint(x: 106.19, y: 87.19), controlPoint1: CGPoint(x: 106.16, y: 86.84), controlPoint2: CGPoint(x: 106.17, y: 87.01))
         stroke69Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke69Path.lineWidth = 1.75
         stroke69Path.miterLimit = 4
         stroke69Path.lineJoinStyle = .round
@@ -1411,7 +1400,7 @@ public class StyleKit : NSObject {
         stroke71Path.addCurve(to: CGPoint(x: 106.29, y: 88.17), controlPoint1: CGPoint(x: 106.23, y: 87.61), controlPoint2: CGPoint(x: 106.25, y: 87.88))
         stroke71Path.addCurve(to: CGPoint(x: 106.2, y: 87.36), controlPoint1: CGPoint(x: 106.25, y: 87.88), controlPoint2: CGPoint(x: 106.23, y: 87.61))
         stroke71Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke71Path.lineWidth = 1.75
         stroke71Path.miterLimit = 4
         stroke71Path.lineJoinStyle = .round
@@ -1427,7 +1416,7 @@ public class StyleKit : NSObject {
         stroke73Path.addCurve(to: CGPoint(x: 95.44, y: 123.8), controlPoint1: CGPoint(x: 100.72, y: 143.42), controlPoint2: CGPoint(x: 95.92, y: 129.15))
         stroke73Path.addCurve(to: CGPoint(x: 105.79, y: 139.47), controlPoint1: CGPoint(x: 97.83, y: 126.57), controlPoint2: CGPoint(x: 103.96, y: 133.55))
         stroke73Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke73Path.lineWidth = 1.75
         stroke73Path.miterLimit = 4
         stroke73Path.lineJoinStyle = .round
@@ -1444,7 +1433,7 @@ public class StyleKit : NSObject {
         stroke75Path.addCurve(to: CGPoint(x: 75.04, y: 87.77), controlPoint1: CGPoint(x: 82.7, y: 89.26), controlPoint2: CGPoint(x: 77.73, y: 89.04))
         stroke75Path.addCurve(to: CGPoint(x: 77.53, y: 79.34), controlPoint1: CGPoint(x: 76.08, y: 84.81), controlPoint2: CGPoint(x: 76.95, y: 81.92))
         stroke75Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke75Path.lineWidth = 1.75
         stroke75Path.miterLimit = 4
         stroke75Path.lineJoinStyle = .round
@@ -1465,7 +1454,7 @@ public class StyleKit : NSObject {
         stroke77Path.addCurve(to: CGPoint(x: 80.01, y: 133.26), controlPoint1: CGPoint(x: 63.97, y: 157.33), controlPoint2: CGPoint(x: 80.01, y: 135.64))
         stroke77Path.addCurve(to: CGPoint(x: 81.32, y: 127.17), controlPoint1: CGPoint(x: 79.72, y: 130.34), controlPoint2: CGPoint(x: 81.32, y: 127.17))
         stroke77Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke77Path.lineWidth = 1.75
         stroke77Path.miterLimit = 4
         stroke77Path.lineJoinStyle = .round
@@ -1483,7 +1472,7 @@ public class StyleKit : NSObject {
         stroke79Path.addCurve(to: CGPoint(x: 66.19, y: 107.58), controlPoint1: CGPoint(x: 72.44, y: 116.22), controlPoint2: CGPoint(x: 68.97, y: 112.09))
         stroke79Path.addCurve(to: CGPoint(x: 75.04, y: 87.77), controlPoint1: CGPoint(x: 69.01, y: 102.2), controlPoint2: CGPoint(x: 72.16, y: 95.96))
         stroke79Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke79Path.lineWidth = 1.75
         stroke79Path.miterLimit = 4
         stroke79Path.lineJoinStyle = .round
@@ -1509,7 +1498,7 @@ public class StyleKit : NSObject {
         stroke81Path.addCurve(to: CGPoint(x: 67.79, y: 175.3), controlPoint1: CGPoint(x: 70.55, y: 188.37), controlPoint2: CGPoint(x: 68.76, y: 181.24))
         stroke81Path.addCurve(to: CGPoint(x: 68.62, y: 166.87), controlPoint1: CGPoint(x: 68.42, y: 172.33), controlPoint2: CGPoint(x: 68.82, y: 169.33))
         stroke81Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke81Path.lineWidth = 1.75
         stroke81Path.miterLimit = 4
         stroke81Path.lineJoinStyle = .round
@@ -1524,7 +1513,7 @@ public class StyleKit : NSObject {
         stroke83Path.addCurve(to: CGPoint(x: 50.13, y: 32.7), controlPoint1: CGPoint(x: 46.5, y: 31.45), controlPoint2: CGPoint(x: 50.13, y: 32.7))
         stroke83Path.addLine(to: CGPoint(x: 49.32, y: 22.7))
         stroke83Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke83Path.lineWidth = 1.75
         stroke83Path.miterLimit = 4
         stroke83Path.lineJoinStyle = .round
@@ -1539,7 +1528,7 @@ public class StyleKit : NSObject {
         stroke85Path.addCurve(to: CGPoint(x: 77.81, y: 32.7), controlPoint1: CGPoint(x: 81.45, y: 31.45), controlPoint2: CGPoint(x: 77.81, y: 32.7))
         stroke85Path.addLine(to: CGPoint(x: 78.62, y: 22.7))
         stroke85Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke85Path.lineWidth = 1.75
         stroke85Path.miterLimit = 4
         stroke85Path.lineJoinStyle = .round
@@ -1562,7 +1551,7 @@ public class StyleKit : NSObject {
         stroke87Path.addCurve(to: CGPoint(x: 94.41, y: 57.95), controlPoint1: CGPoint(x: 80.12, y: 67.83), controlPoint2: CGPoint(x: 88.08, y: 62.87))
         stroke87Path.addCurve(to: CGPoint(x: 85.73, y: 55.79), controlPoint1: CGPoint(x: 91.68, y: 56.59), controlPoint2: CGPoint(x: 88.71, y: 55.79))
         stroke87Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke87Path.lineWidth = 1.75
         stroke87Path.miterLimit = 4
         stroke87Path.lineJoinStyle = .round
@@ -1583,7 +1572,7 @@ public class StyleKit : NSObject {
         stroke89Path.addCurve(to: CGPoint(x: 50.59, y: 38.34), controlPoint1: CGPoint(x: 48.84, y: 19.19), controlPoint2: CGPoint(x: 50.59, y: 38.34))
         stroke89Path.addCurve(to: CGPoint(x: 54.41, y: 42.66), controlPoint1: CGPoint(x: 50.59, y: 38.34), controlPoint2: CGPoint(x: 52.13, y: 40.43))
         stroke89Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke89Path.lineWidth = 1.75
         stroke89Path.miterLimit = 4
         stroke89Path.lineJoinStyle = .round
@@ -1711,7 +1700,7 @@ public class StyleKit : NSObject {
         stroke91Path.addCurve(to: CGPoint(x: 119.73, y: 181.32), controlPoint1: CGPoint(x: 117.98, y: 181.64), controlPoint2: CGPoint(x: 118.91, y: 181.65))
         stroke91Path.addCurve(to: CGPoint(x: 126.4, y: 170.36), controlPoint1: CGPoint(x: 120.37, y: 181.06), controlPoint2: CGPoint(x: 129.19, y: 177.28))
         stroke91Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke91Path.lineWidth = 1.75
         stroke91Path.miterLimit = 4
         stroke91Path.lineJoinStyle = .round
@@ -1721,7 +1710,7 @@ public class StyleKit : NSObject {
 
     }
 
-    @objc dynamic public class func drawMusclesFrontCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 113, height: 318), resizing: ResizingBehavior = .aspectFit) {
+    @objc dynamic public class func drawMusclesFrontCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 113, height: 318), resizing: ResizingBehavior = .aspectFit, abs: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), biceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), chest: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), quadriceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -1733,10 +1722,8 @@ public class StyleKit : NSObject {
 
 
         //// Color Declarations
-        let fillColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
-        let fillColor2 = UIColor(red: 0.737, green: 0.769, blue: 1.000, alpha: 1.000)
-        let strokeColor = UIColor(red: 0.208, green: 0.243, blue: 0.510, alpha: 1.000)
-        let fillColor3 = UIColor(red: 0.494, green: 0.553, blue: 0.996, alpha: 1.000)
+        let baseFill = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
+        let baseStroke = UIColor(red: 0.208, green: 0.243, blue: 0.510, alpha: 1.000)
 
         //// fill
         //// Fill-1 Drawing
@@ -1830,7 +1817,7 @@ public class StyleKit : NSObject {
         fill1Path.addCurve(to: CGPoint(x: 111.54, y: 170.82), controlPoint1: CGPoint(x: 104.49, y: 181.97), controlPoint2: CGPoint(x: 113.38, y: 175.22))
         fill1Path.close()
         fill1Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill1Path.fill()
 
 
@@ -1844,7 +1831,7 @@ public class StyleKit : NSObject {
         fill4Path.addCurve(to: CGPoint(x: 13.64, y: 76.52), controlPoint1: CGPoint(x: 24.18, y: 56.69), controlPoint2: CGPoint(x: 13.64, y: 66.82))
         fill4Path.close()
         fill4Path.usesEvenOddFillRule = true
-        fillColor2.setFill()
+        shoulders.setFill()
         fill4Path.fill()
 
 
@@ -1862,7 +1849,7 @@ public class StyleKit : NSObject {
         fill6Path.addCurve(to: CGPoint(x: 51.72, y: 67.31), controlPoint1: CGPoint(x: 54.56, y: 71.89), controlPoint2: CGPoint(x: 52.73, y: 69.32))
         fill6Path.close()
         fill6Path.usesEvenOddFillRule = true
-        fillColor3.setFill()
+        chest.setFill()
         fill6Path.fill()
 
 
@@ -1879,7 +1866,7 @@ public class StyleKit : NSObject {
         fill8Path.addCurve(to: CGPoint(x: 44.52, y: 104.74), controlPoint1: CGPoint(x: 45.3, y: 106.34), controlPoint2: CGPoint(x: 44.52, y: 105.48))
         fill8Path.close()
         fill8Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill8Path.fill()
 
 
@@ -1896,7 +1883,7 @@ public class StyleKit : NSObject {
         fill10Path.addLine(to: CGPoint(x: 55.13, y: 108.86))
         fill10Path.close()
         fill10Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill10Path.fill()
 
 
@@ -1913,7 +1900,7 @@ public class StyleKit : NSObject {
         fill12Path.addCurve(to: CGPoint(x: 44.43, y: 127.75), controlPoint1: CGPoint(x: 46.48, y: 130.04), controlPoint2: CGPoint(x: 44.43, y: 129.09))
         fill12Path.close()
         fill12Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill12Path.fill()
 
 
@@ -1928,7 +1915,7 @@ public class StyleKit : NSObject {
         fill14Path.addCurve(to: CGPoint(x: 53.43, y: 132.72), controlPoint1: CGPoint(x: 55.06, y: 133.62), controlPoint2: CGPoint(x: 54.84, y: 132.72))
         fill14Path.close()
         fill14Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill14Path.fill()
 
 
@@ -1945,7 +1932,7 @@ public class StyleKit : NSObject {
         fill16Path.addCurve(to: CGPoint(x: 68.27, y: 104.74), controlPoint1: CGPoint(x: 67.49, y: 106.34), controlPoint2: CGPoint(x: 68.27, y: 105.48))
         fill16Path.close()
         fill16Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill16Path.fill()
 
 
@@ -1962,7 +1949,7 @@ public class StyleKit : NSObject {
         fill18Path.addLine(to: CGPoint(x: 57.66, y: 108.86))
         fill18Path.close()
         fill18Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill18Path.fill()
 
 
@@ -1979,7 +1966,7 @@ public class StyleKit : NSObject {
         fill20Path.addCurve(to: CGPoint(x: 68.36, y: 127.75), controlPoint1: CGPoint(x: 66.3, y: 130.04), controlPoint2: CGPoint(x: 68.36, y: 129.09))
         fill20Path.close()
         fill20Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill20Path.fill()
 
 
@@ -1994,7 +1981,7 @@ public class StyleKit : NSObject {
         fill22Path.addCurve(to: CGPoint(x: 59.36, y: 132.72), controlPoint1: CGPoint(x: 57.73, y: 133.62), controlPoint2: CGPoint(x: 57.95, y: 132.72))
         fill22Path.close()
         fill22Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill22Path.fill()
 
 
@@ -2006,7 +1993,7 @@ public class StyleKit : NSObject {
         fill24Path.addCurve(to: CGPoint(x: 24.69, y: 77.85), controlPoint1: CGPoint(x: 24.23, y: 78.55), controlPoint2: CGPoint(x: 24.46, y: 78.21))
         fill24Path.close()
         fill24Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill24Path.fill()
 
 
@@ -2024,7 +2011,7 @@ public class StyleKit : NSObject {
         fill26Path.addCurve(to: CGPoint(x: 22.76, y: 80.63), controlPoint1: CGPoint(x: 24.55, y: 83.3), controlPoint2: CGPoint(x: 25.42, y: 82.11))
         fill26Path.close()
         fill26Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        biceps.setFill()
         fill26Path.fill()
 
 
@@ -2035,7 +2022,7 @@ public class StyleKit : NSObject {
         fill28Path.addCurve(to: CGPoint(x: 23.35, y: 79.83), controlPoint1: CGPoint(x: 23.77, y: 79.22), controlPoint2: CGPoint(x: 23.56, y: 79.53))
         fill28Path.close()
         fill28Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill28Path.fill()
 
 
@@ -2050,7 +2037,7 @@ public class StyleKit : NSObject {
         fill30Path.addCurve(to: CGPoint(x: 56.39, y: 1), controlPoint1: CGPoint(x: 71.51, y: 9.95), controlPoint2: CGPoint(x: 66.47, y: 1))
         fill30Path.close()
         fill30Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill30Path.fill()
 
 
@@ -2077,7 +2064,7 @@ public class StyleKit : NSObject {
         fill32Path.addCurve(to: CGPoint(x: 71.02, y: 141.44), controlPoint1: CGPoint(x: 73.24, y: 146.4), controlPoint2: CGPoint(x: 71.02, y: 144.35))
         fill32Path.close()
         fill32Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill32Path.fill()
 
 
@@ -2086,7 +2073,7 @@ public class StyleKit : NSObject {
         fill34Path.move(to: CGPoint(x: 76.14, y: 146.4))
         fill34Path.addCurve(to: CGPoint(x: 82.23, y: 136.41), controlPoint1: CGPoint(x: 78.07, y: 141.37), controlPoint2: CGPoint(x: 82.23, y: 136.41))
         fill34Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill34Path.fill()
 
 
@@ -2134,7 +2121,7 @@ public class StyleKit : NSObject {
         fill36Path.addLine(to: CGPoint(x: 28.4, y: 226.8))
         fill36Path.close()
         fill36Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        quadriceps.setFill()
         fill36Path.fill()
 
 
@@ -2149,7 +2136,7 @@ public class StyleKit : NSObject {
         fill38Path.addCurve(to: CGPoint(x: 56.39, y: 48.3), controlPoint1: CGPoint(x: 58.84, y: 47.93), controlPoint2: CGPoint(x: 57.6, y: 48.3))
         fill38Path.close()
         fill38Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill38Path.fill()
 
 
@@ -2187,7 +2174,7 @@ public class StyleKit : NSObject {
         fill40Path.addLine(to: CGPoint(x: 32.24, y: 147.62))
         fill40Path.close()
         fill40Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        quadriceps.setFill()
         fill40Path.fill()
 
 
@@ -2231,7 +2218,7 @@ public class StyleKit : NSObject {
         fill42Path.addCurve(to: CGPoint(x: 43.7, y: 172.22), controlPoint1: CGPoint(x: 52.81, y: 193.53), controlPoint2: CGPoint(x: 48.24, y: 182.22))
         fill42Path.close()
         fill42Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        quadriceps.setFill()
         fill42Path.fill()
 
 
@@ -2279,7 +2266,7 @@ public class StyleKit : NSObject {
         fill44Path.addLine(to: CGPoint(x: 84.38, y: 226.8))
         fill44Path.close()
         fill44Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        quadriceps.setFill()
         fill44Path.fill()
 
 
@@ -2317,7 +2304,7 @@ public class StyleKit : NSObject {
         fill46Path.addLine(to: CGPoint(x: 80.55, y: 147.62))
         fill46Path.close()
         fill46Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        quadriceps.setFill()
         fill46Path.fill()
 
 
@@ -2361,7 +2348,7 @@ public class StyleKit : NSObject {
         fill48Path.addCurve(to: CGPoint(x: 69.09, y: 172.22), controlPoint1: CGPoint(x: 59.98, y: 193.53), controlPoint2: CGPoint(x: 64.55, y: 182.22))
         fill48Path.close()
         fill48Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        quadriceps.setFill()
         fill48Path.fill()
 
 
@@ -2376,7 +2363,7 @@ public class StyleKit : NSObject {
         fill50Path.addCurve(to: CGPoint(x: 46.03, y: 293.4), controlPoint1: CGPoint(x: 40.93, y: 251.99), controlPoint2: CGPoint(x: 36.43, y: 271.94))
         fill50Path.close()
         fill50Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        calves.setFill()
         fill50Path.fill()
 
 
@@ -2389,7 +2376,7 @@ public class StyleKit : NSObject {
         fill52Path.addCurve(to: CGPoint(x: 26.33, y: 252.7), controlPoint1: CGPoint(x: 26.42, y: 247.75), controlPoint2: CGPoint(x: 26.33, y: 249.91))
         fill52Path.close()
         fill52Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        calves.setFill()
         fill52Path.fill()
 
 
@@ -2404,7 +2391,7 @@ public class StyleKit : NSObject {
         fill54Path.addCurve(to: CGPoint(x: 66.75, y: 293.4), controlPoint1: CGPoint(x: 71.86, y: 251.99), controlPoint2: CGPoint(x: 76.36, y: 271.94))
         fill54Path.close()
         fill54Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        calves.setFill()
         fill54Path.fill()
 
 
@@ -2417,7 +2404,7 @@ public class StyleKit : NSObject {
         fill56Path.addCurve(to: CGPoint(x: 86.46, y: 252.7), controlPoint1: CGPoint(x: 86.36, y: 247.75), controlPoint2: CGPoint(x: 86.46, y: 249.91))
         fill56Path.close()
         fill56Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        calves.setFill()
         fill56Path.fill()
 
 
@@ -2428,7 +2415,7 @@ public class StyleKit : NSObject {
         fill58Path.addCurve(to: CGPoint(x: 10.86, y: 109.58), controlPoint1: CGPoint(x: 10.87, y: 108.02), controlPoint2: CGPoint(x: 10.86, y: 108.78))
         fill58Path.close()
         fill58Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill58Path.fill()
 
 
@@ -2444,7 +2431,7 @@ public class StyleKit : NSObject {
         fill60Path.addCurve(to: CGPoint(x: 14.66, y: 126.68), controlPoint1: CGPoint(x: 9.37, y: 133.05), controlPoint2: CGPoint(x: 13.9, y: 131.28))
         fill60Path.close()
         fill60Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        forearms.setFill()
         fill60Path.fill()
 
 
@@ -2456,7 +2443,7 @@ public class StyleKit : NSObject {
         fill62Path.addCurve(to: CGPoint(x: 15.53, y: 134.63), controlPoint1: CGPoint(x: 23.67, y: 126.68), controlPoint2: CGPoint(x: 17.65, y: 128.13))
         fill62Path.close()
         fill62Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        forearms.setFill()
         fill62Path.fill()
 
 
@@ -2470,7 +2457,7 @@ public class StyleKit : NSObject {
         fill64Path.addCurve(to: CGPoint(x: 99.15, y: 76.52), controlPoint1: CGPoint(x: 88.61, y: 56.69), controlPoint2: CGPoint(x: 99.15, y: 66.82))
         fill64Path.close()
         fill64Path.usesEvenOddFillRule = true
-        fillColor2.setFill()
+        shoulders.setFill()
         fill64Path.fill()
 
 
@@ -2487,7 +2474,7 @@ public class StyleKit : NSObject {
         fill66Path.addCurve(to: CGPoint(x: 61.07, y: 67.31), controlPoint1: CGPoint(x: 58.22, y: 71.89), controlPoint2: CGPoint(x: 60.06, y: 69.32))
         fill66Path.close()
         fill66Path.usesEvenOddFillRule = true
-        fillColor3.setFill()
+        chest.setFill()
         fill66Path.fill()
 
 
@@ -2499,7 +2486,7 @@ public class StyleKit : NSObject {
         fill68Path.addCurve(to: CGPoint(x: 88.09, y: 77.85), controlPoint1: CGPoint(x: 88.56, y: 78.55), controlPoint2: CGPoint(x: 88.33, y: 78.21))
         fill68Path.close()
         fill68Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill68Path.fill()
 
 
@@ -2517,7 +2504,7 @@ public class StyleKit : NSObject {
         fill70Path.addCurve(to: CGPoint(x: 90.03, y: 80.63), controlPoint1: CGPoint(x: 88.24, y: 83.3), controlPoint2: CGPoint(x: 87.37, y: 82.11))
         fill70Path.close()
         fill70Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        biceps.setFill()
         fill70Path.fill()
 
 
@@ -2528,7 +2515,7 @@ public class StyleKit : NSObject {
         fill72Path.addCurve(to: CGPoint(x: 89.44, y: 79.83), controlPoint1: CGPoint(x: 89.02, y: 79.22), controlPoint2: CGPoint(x: 89.23, y: 79.53))
         fill72Path.close()
         fill72Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill72Path.fill()
 
 
@@ -2544,7 +2531,7 @@ public class StyleKit : NSObject {
         fill74Path.addCurve(to: CGPoint(x: 98.13, y: 126.68), controlPoint1: CGPoint(x: 103.41, y: 133.05), controlPoint2: CGPoint(x: 98.89, y: 131.28))
         fill74Path.close()
         fill74Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        forearms.setFill()
         fill74Path.fill()
 
 
@@ -2556,7 +2543,7 @@ public class StyleKit : NSObject {
         fill76Path.addCurve(to: CGPoint(x: 97.26, y: 134.63), controlPoint1: CGPoint(x: 89.12, y: 126.68), controlPoint2: CGPoint(x: 95.13, y: 128.13))
         fill76Path.close()
         fill76Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        forearms.setFill()
         fill76Path.fill()
 
 
@@ -2569,7 +2556,7 @@ public class StyleKit : NSObject {
         fill78Path.addLine(to: CGPoint(x: 41.7, y: 22.82))
         fill78Path.close()
         fill78Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill78Path.fill()
 
 
@@ -2582,7 +2569,7 @@ public class StyleKit : NSObject {
         fill80Path.addLine(to: CGPoint(x: 71.08, y: 22.82))
         fill80Path.close()
         fill80Path.usesEvenOddFillRule = true
-        fillColor.setFill()
+        baseFill.setFill()
         fill80Path.fill()
 
 
@@ -2598,7 +2585,7 @@ public class StyleKit : NSObject {
         stroke1Path.addCurve(to: CGPoint(x: 34.72, y: 56.69), controlPoint1: CGPoint(x: 39.36, y: 59.26), controlPoint2: CGPoint(x: 35.91, y: 58.48))
         stroke1Path.addCurve(to: CGPoint(x: 13.64, y: 76.52), controlPoint1: CGPoint(x: 24.18, y: 56.69), controlPoint2: CGPoint(x: 13.64, y: 66.82))
         stroke1Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke1Path.lineWidth = 1.74
         stroke1Path.miterLimit = 4
         stroke1Path.lineJoinStyle = .round
@@ -2618,7 +2605,7 @@ public class StyleKit : NSObject {
         stroke3Path.addLine(to: CGPoint(x: 54.56, y: 80.17))
         stroke3Path.addCurve(to: CGPoint(x: 51.72, y: 67.31), controlPoint1: CGPoint(x: 54.56, y: 71.89), controlPoint2: CGPoint(x: 52.73, y: 69.32))
         stroke3Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke3Path.lineWidth = 1.74
         stroke3Path.miterLimit = 4
         stroke3Path.lineJoinStyle = .round
@@ -2637,7 +2624,10 @@ public class StyleKit : NSObject {
         stroke5Path.addCurve(to: CGPoint(x: 45.93, y: 105.71), controlPoint1: CGPoint(x: 49.57, y: 103.8), controlPoint2: CGPoint(x: 46.56, y: 105.07))
         stroke5Path.addCurve(to: CGPoint(x: 44.52, y: 104.74), controlPoint1: CGPoint(x: 45.3, y: 106.34), controlPoint2: CGPoint(x: 44.52, y: 105.48))
         stroke5Path.close()
-        strokeColor.setStroke()
+        stroke5Path.usesEvenOddFillRule = true
+        abs.setFill()
+        stroke5Path.fill()
+        baseStroke.setStroke()
         stroke5Path.lineWidth = 1.74
         stroke5Path.miterLimit = 4
         stroke5Path.lineJoinStyle = .round
@@ -2656,7 +2646,10 @@ public class StyleKit : NSObject {
         stroke7Path.addCurve(to: CGPoint(x: 55.13, y: 114.38), controlPoint1: CGPoint(x: 52.24, y: 117.59), controlPoint2: CGPoint(x: 55.13, y: 116.25))
         stroke7Path.addLine(to: CGPoint(x: 55.13, y: 108.86))
         stroke7Path.close()
-        strokeColor.setStroke()
+        stroke7Path.usesEvenOddFillRule = true
+        abs.setFill()
+        stroke7Path.fill()
+        baseStroke.setStroke()
         stroke7Path.lineWidth = 1.74
         stroke7Path.miterLimit = 4
         stroke7Path.lineJoinStyle = .round
@@ -2675,7 +2668,10 @@ public class StyleKit : NSObject {
         stroke9Path.addLine(to: CGPoint(x: 47.49, y: 130.04))
         stroke9Path.addCurve(to: CGPoint(x: 44.43, y: 127.75), controlPoint1: CGPoint(x: 46.48, y: 130.04), controlPoint2: CGPoint(x: 44.43, y: 129.09))
         stroke9Path.close()
-        strokeColor.setStroke()
+        stroke9Path.usesEvenOddFillRule = true
+        abs.setFill()
+        stroke9Path.fill()
+        baseStroke.setStroke()
         stroke9Path.lineWidth = 1.74
         stroke9Path.miterLimit = 4
         stroke9Path.lineJoinStyle = .round
@@ -2692,7 +2688,10 @@ public class StyleKit : NSObject {
         stroke11Path.addCurve(to: CGPoint(x: 55.06, y: 134.81), controlPoint1: CGPoint(x: 55.28, y: 154.72), controlPoint2: CGPoint(x: 55.06, y: 135.8))
         stroke11Path.addCurve(to: CGPoint(x: 53.43, y: 132.72), controlPoint1: CGPoint(x: 55.06, y: 133.62), controlPoint2: CGPoint(x: 54.84, y: 132.72))
         stroke11Path.close()
-        strokeColor.setStroke()
+        stroke11Path.usesEvenOddFillRule = true
+        abs.setFill()
+        stroke11Path.fill()
+        baseStroke.setStroke()
         stroke11Path.lineWidth = 1.74
         stroke11Path.miterLimit = 4
         stroke11Path.lineJoinStyle = .round
@@ -2711,7 +2710,10 @@ public class StyleKit : NSObject {
         stroke13Path.addCurve(to: CGPoint(x: 66.86, y: 105.71), controlPoint1: CGPoint(x: 63.22, y: 103.8), controlPoint2: CGPoint(x: 66.23, y: 105.07))
         stroke13Path.addCurve(to: CGPoint(x: 68.27, y: 104.74), controlPoint1: CGPoint(x: 67.49, y: 106.34), controlPoint2: CGPoint(x: 68.27, y: 105.48))
         stroke13Path.close()
-        strokeColor.setStroke()
+        stroke13Path.usesEvenOddFillRule = true
+        abs.setFill()
+        stroke13Path.fill()
+        baseStroke.setStroke()
         stroke13Path.lineWidth = 1.74
         stroke13Path.miterLimit = 4
         stroke13Path.lineJoinStyle = .round
@@ -2730,7 +2732,10 @@ public class StyleKit : NSObject {
         stroke15Path.addCurve(to: CGPoint(x: 57.66, y: 114.38), controlPoint1: CGPoint(x: 60.55, y: 117.59), controlPoint2: CGPoint(x: 57.66, y: 116.25))
         stroke15Path.addLine(to: CGPoint(x: 57.66, y: 108.86))
         stroke15Path.close()
-        strokeColor.setStroke()
+        stroke15Path.usesEvenOddFillRule = true
+        abs.setFill()
+        stroke15Path.fill()
+        baseStroke.setStroke()
         stroke15Path.lineWidth = 1.74
         stroke15Path.miterLimit = 4
         stroke15Path.lineJoinStyle = .round
@@ -2749,7 +2754,10 @@ public class StyleKit : NSObject {
         stroke17Path.addLine(to: CGPoint(x: 65.3, y: 130.04))
         stroke17Path.addCurve(to: CGPoint(x: 68.36, y: 127.75), controlPoint1: CGPoint(x: 66.3, y: 130.04), controlPoint2: CGPoint(x: 68.36, y: 129.09))
         stroke17Path.close()
-        strokeColor.setStroke()
+        stroke17Path.usesEvenOddFillRule = true
+        abs.setFill()
+        stroke17Path.fill()
+        baseStroke.setStroke()
         stroke17Path.lineWidth = 1.74
         stroke17Path.miterLimit = 4
         stroke17Path.lineJoinStyle = .round
@@ -2766,7 +2774,10 @@ public class StyleKit : NSObject {
         stroke19Path.addCurve(to: CGPoint(x: 57.73, y: 134.81), controlPoint1: CGPoint(x: 57.51, y: 154.72), controlPoint2: CGPoint(x: 57.73, y: 135.8))
         stroke19Path.addCurve(to: CGPoint(x: 59.36, y: 132.72), controlPoint1: CGPoint(x: 57.73, y: 133.62), controlPoint2: CGPoint(x: 57.95, y: 132.72))
         stroke19Path.close()
-        strokeColor.setStroke()
+        stroke19Path.usesEvenOddFillRule = true
+        abs.setFill()
+        stroke19Path.fill()
+        baseStroke.setStroke()
         stroke19Path.lineWidth = 1.74
         stroke19Path.miterLimit = 4
         stroke19Path.lineJoinStyle = .round
@@ -2780,7 +2791,7 @@ public class StyleKit : NSObject {
         stroke21Path.addCurve(to: CGPoint(x: 24, y: 78.88), controlPoint1: CGPoint(x: 24.46, y: 78.21), controlPoint2: CGPoint(x: 24.23, y: 78.55))
         stroke21Path.addCurve(to: CGPoint(x: 24.69, y: 77.85), controlPoint1: CGPoint(x: 24.23, y: 78.55), controlPoint2: CGPoint(x: 24.46, y: 78.21))
         stroke21Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke21Path.lineWidth = 1.74
         stroke21Path.miterLimit = 4
         stroke21Path.lineJoinStyle = .round
@@ -2800,7 +2811,7 @@ public class StyleKit : NSObject {
         stroke23Path.addCurve(to: CGPoint(x: 27, y: 85.42), controlPoint1: CGPoint(x: 27.33, y: 98.73), controlPoint2: CGPoint(x: 27, y: 85.42))
         stroke23Path.addCurve(to: CGPoint(x: 22.76, y: 80.63), controlPoint1: CGPoint(x: 24.55, y: 83.3), controlPoint2: CGPoint(x: 25.42, y: 82.11))
         stroke23Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke23Path.lineWidth = 1.74
         stroke23Path.miterLimit = 4
         stroke23Path.lineJoinStyle = .round
@@ -2813,7 +2824,7 @@ public class StyleKit : NSObject {
         stroke25Path.addCurve(to: CGPoint(x: 23.99, y: 78.91), controlPoint1: CGPoint(x: 23.56, y: 79.53), controlPoint2: CGPoint(x: 23.77, y: 79.22))
         stroke25Path.addCurve(to: CGPoint(x: 23.35, y: 79.83), controlPoint1: CGPoint(x: 23.77, y: 79.22), controlPoint2: CGPoint(x: 23.56, y: 79.53))
         stroke25Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke25Path.lineWidth = 1.74
         stroke25Path.miterLimit = 4
         stroke25Path.lineJoinStyle = .round
@@ -2830,7 +2841,7 @@ public class StyleKit : NSObject {
         stroke27Path.addCurve(to: CGPoint(x: 71.51, y: 14.62), controlPoint1: CGPoint(x: 69.77, y: 38.57), controlPoint2: CGPoint(x: 71.51, y: 19.3))
         stroke27Path.addCurve(to: CGPoint(x: 56.39, y: 1), controlPoint1: CGPoint(x: 71.51, y: 9.95), controlPoint2: CGPoint(x: 66.47, y: 1))
         stroke27Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke27Path.lineWidth = 1.74
         stroke27Path.miterLimit = 4
         stroke27Path.lineJoinStyle = .round
@@ -2859,7 +2870,7 @@ public class StyleKit : NSObject {
         stroke29Path.addCurve(to: CGPoint(x: 76.14, y: 146.4), controlPoint1: CGPoint(x: 60.55, y: 165.6), controlPoint2: CGPoint(x: 76.14, y: 153.07))
         stroke29Path.addCurve(to: CGPoint(x: 71.02, y: 141.44), controlPoint1: CGPoint(x: 73.24, y: 146.4), controlPoint2: CGPoint(x: 71.02, y: 144.35))
         stroke29Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke29Path.lineWidth = 1.74
         stroke29Path.miterLimit = 4
         stroke29Path.lineJoinStyle = .round
@@ -2870,7 +2881,7 @@ public class StyleKit : NSObject {
         let stroke31Path = UIBezierPath()
         stroke31Path.move(to: CGPoint(x: 76.14, y: 146.4))
         stroke31Path.addCurve(to: CGPoint(x: 82.23, y: 136.41), controlPoint1: CGPoint(x: 78.07, y: 141.37), controlPoint2: CGPoint(x: 82.23, y: 136.41))
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke31Path.lineWidth = 1.74
         stroke31Path.miterLimit = 4
         stroke31Path.lineJoinStyle = .round
@@ -2920,7 +2931,7 @@ public class StyleKit : NSObject {
         stroke33Path.addCurve(to: CGPoint(x: 28.4, y: 226.79), controlPoint1: CGPoint(x: 25.88, y: 213.94), controlPoint2: CGPoint(x: 28.07, y: 220.7))
         stroke33Path.addLine(to: CGPoint(x: 28.4, y: 226.8))
         stroke33Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke33Path.lineWidth = 1.74
         stroke33Path.miterLimit = 4
         stroke33Path.lineJoinStyle = .round
@@ -2937,7 +2948,7 @@ public class StyleKit : NSObject {
         stroke35Path.addLine(to: CGPoint(x: 60.05, y: 47.34))
         stroke35Path.addCurve(to: CGPoint(x: 56.39, y: 48.3), controlPoint1: CGPoint(x: 58.84, y: 47.93), controlPoint2: CGPoint(x: 57.6, y: 48.3))
         stroke35Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke35Path.lineWidth = 1.74
         stroke35Path.miterLimit = 4
         stroke35Path.lineJoinStyle = .round
@@ -2977,7 +2988,7 @@ public class StyleKit : NSObject {
         stroke37Path.addCurve(to: CGPoint(x: 31.79, y: 137.99), controlPoint1: CGPoint(x: 35.91, y: 143.53), controlPoint2: CGPoint(x: 31.79, y: 137.99))
         stroke37Path.addLine(to: CGPoint(x: 32.24, y: 147.62))
         stroke37Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke37Path.lineWidth = 1.74
         stroke37Path.miterLimit = 4
         stroke37Path.lineJoinStyle = .round
@@ -3023,7 +3034,7 @@ public class StyleKit : NSObject {
         stroke39Path.addCurve(to: CGPoint(x: 52.81, y: 202.81), controlPoint1: CGPoint(x: 52.72, y: 205.37), controlPoint2: CGPoint(x: 52.75, y: 204.12))
         stroke39Path.addCurve(to: CGPoint(x: 43.7, y: 172.22), controlPoint1: CGPoint(x: 52.81, y: 193.53), controlPoint2: CGPoint(x: 48.24, y: 182.22))
         stroke39Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke39Path.lineWidth = 1.74
         stroke39Path.miterLimit = 4
         stroke39Path.lineJoinStyle = .round
@@ -3073,7 +3084,7 @@ public class StyleKit : NSObject {
         stroke41Path.addCurve(to: CGPoint(x: 84.39, y: 226.79), controlPoint1: CGPoint(x: 86.91, y: 213.94), controlPoint2: CGPoint(x: 84.72, y: 220.7))
         stroke41Path.addLine(to: CGPoint(x: 84.38, y: 226.8))
         stroke41Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke41Path.lineWidth = 1.74
         stroke41Path.miterLimit = 4
         stroke41Path.lineJoinStyle = .round
@@ -3113,7 +3124,7 @@ public class StyleKit : NSObject {
         stroke43Path.addCurve(to: CGPoint(x: 81, y: 137.99), controlPoint1: CGPoint(x: 76.88, y: 143.53), controlPoint2: CGPoint(x: 81, y: 137.99))
         stroke43Path.addLine(to: CGPoint(x: 80.55, y: 147.62))
         stroke43Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke43Path.lineWidth = 1.74
         stroke43Path.miterLimit = 4
         stroke43Path.lineJoinStyle = .round
@@ -3159,7 +3170,7 @@ public class StyleKit : NSObject {
         stroke45Path.addCurve(to: CGPoint(x: 59.98, y: 202.81), controlPoint1: CGPoint(x: 60.07, y: 205.37), controlPoint2: CGPoint(x: 60.04, y: 204.12))
         stroke45Path.addCurve(to: CGPoint(x: 69.09, y: 172.22), controlPoint1: CGPoint(x: 59.98, y: 193.53), controlPoint2: CGPoint(x: 64.55, y: 182.22))
         stroke45Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke45Path.lineWidth = 1.74
         stroke45Path.miterLimit = 4
         stroke45Path.lineJoinStyle = .round
@@ -3176,7 +3187,7 @@ public class StyleKit : NSObject {
         stroke47Path.addCurve(to: CGPoint(x: 42.81, y: 246.78), controlPoint1: CGPoint(x: 46.26, y: 252.03), controlPoint2: CGPoint(x: 42.81, y: 249.24))
         stroke47Path.addCurve(to: CGPoint(x: 46.03, y: 293.4), controlPoint1: CGPoint(x: 40.93, y: 251.99), controlPoint2: CGPoint(x: 36.43, y: 271.94))
         stroke47Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke47Path.lineWidth = 1.74
         stroke47Path.miterLimit = 4
         stroke47Path.lineJoinStyle = .round
@@ -3191,7 +3202,7 @@ public class StyleKit : NSObject {
         stroke49Path.addCurve(to: CGPoint(x: 26.57, y: 245.95), controlPoint1: CGPoint(x: 36.93, y: 261.9), controlPoint2: CGPoint(x: 30.18, y: 254.27))
         stroke49Path.addCurve(to: CGPoint(x: 26.33, y: 252.7), controlPoint1: CGPoint(x: 26.42, y: 247.75), controlPoint2: CGPoint(x: 26.33, y: 249.91))
         stroke49Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke49Path.lineWidth = 1.74
         stroke49Path.miterLimit = 4
         stroke49Path.lineJoinStyle = .round
@@ -3208,7 +3219,7 @@ public class StyleKit : NSObject {
         stroke51Path.addCurve(to: CGPoint(x: 69.98, y: 246.78), controlPoint1: CGPoint(x: 66.53, y: 252.03), controlPoint2: CGPoint(x: 69.98, y: 249.24))
         stroke51Path.addCurve(to: CGPoint(x: 66.75, y: 293.4), controlPoint1: CGPoint(x: 71.86, y: 251.99), controlPoint2: CGPoint(x: 76.36, y: 271.94))
         stroke51Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke51Path.lineWidth = 1.74
         stroke51Path.miterLimit = 4
         stroke51Path.lineJoinStyle = .round
@@ -3223,7 +3234,7 @@ public class StyleKit : NSObject {
         stroke53Path.addCurve(to: CGPoint(x: 86.22, y: 245.95), controlPoint1: CGPoint(x: 75.86, y: 261.9), controlPoint2: CGPoint(x: 82.61, y: 254.27))
         stroke53Path.addCurve(to: CGPoint(x: 86.46, y: 252.7), controlPoint1: CGPoint(x: 86.36, y: 247.75), controlPoint2: CGPoint(x: 86.46, y: 249.91))
         stroke53Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke53Path.lineWidth = 1.74
         stroke53Path.miterLimit = 4
         stroke53Path.lineJoinStyle = .round
@@ -3236,7 +3247,7 @@ public class StyleKit : NSObject {
         stroke55Path.addCurve(to: CGPoint(x: 10.89, y: 107.29), controlPoint1: CGPoint(x: 10.86, y: 108.78), controlPoint2: CGPoint(x: 10.87, y: 108.03))
         stroke55Path.addCurve(to: CGPoint(x: 10.86, y: 109.58), controlPoint1: CGPoint(x: 10.87, y: 108.02), controlPoint2: CGPoint(x: 10.86, y: 108.78))
         stroke55Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke55Path.lineWidth = 1.74
         stroke55Path.miterLimit = 4
         stroke55Path.lineJoinStyle = .round
@@ -3333,7 +3344,7 @@ public class StyleKit : NSObject {
         stroke57Path.addCurve(to: CGPoint(x: 103.9, y: 182.21), controlPoint1: CGPoint(x: 102.87, y: 180.97), controlPoint2: CGPoint(x: 103.13, y: 182.52))
         stroke57Path.addCurve(to: CGPoint(x: 111.54, y: 170.82), controlPoint1: CGPoint(x: 104.49, y: 181.97), controlPoint2: CGPoint(x: 113.38, y: 175.22))
         stroke57Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke57Path.lineWidth = 1.74
         stroke57Path.miterLimit = 4
         stroke57Path.lineJoinStyle = .round
@@ -3351,7 +3362,7 @@ public class StyleKit : NSObject {
         stroke59Path.addCurve(to: CGPoint(x: 9.12, y: 139.62), controlPoint1: CGPoint(x: 5.59, y: 152.72), controlPoint2: CGPoint(x: 8.87, y: 146.18))
         stroke59Path.addCurve(to: CGPoint(x: 14.66, y: 126.68), controlPoint1: CGPoint(x: 9.37, y: 133.05), controlPoint2: CGPoint(x: 13.9, y: 131.28))
         stroke59Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke59Path.lineWidth = 1.74
         stroke59Path.miterLimit = 4
         stroke59Path.lineJoinStyle = .round
@@ -3365,7 +3376,7 @@ public class StyleKit : NSObject {
         stroke61Path.addCurve(to: CGPoint(x: 23.67, y: 126.68), controlPoint1: CGPoint(x: 11.78, y: 158.66), controlPoint2: CGPoint(x: 23.18, y: 132.05))
         stroke61Path.addCurve(to: CGPoint(x: 15.53, y: 134.63), controlPoint1: CGPoint(x: 23.67, y: 126.68), controlPoint2: CGPoint(x: 17.65, y: 128.13))
         stroke61Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke61Path.lineWidth = 1.74
         stroke61Path.miterLimit = 4
         stroke61Path.lineJoinStyle = .round
@@ -3381,7 +3392,7 @@ public class StyleKit : NSObject {
         stroke63Path.addCurve(to: CGPoint(x: 78.07, y: 56.69), controlPoint1: CGPoint(x: 73.43, y: 59.26), controlPoint2: CGPoint(x: 76.88, y: 58.48))
         stroke63Path.addCurve(to: CGPoint(x: 99.15, y: 76.52), controlPoint1: CGPoint(x: 88.61, y: 56.69), controlPoint2: CGPoint(x: 99.15, y: 66.82))
         stroke63Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke63Path.lineWidth = 1.74
         stroke63Path.miterLimit = 4
         stroke63Path.lineJoinStyle = .round
@@ -3400,7 +3411,7 @@ public class StyleKit : NSObject {
         stroke65Path.addLine(to: CGPoint(x: 58.22, y: 80.17))
         stroke65Path.addCurve(to: CGPoint(x: 61.07, y: 67.31), controlPoint1: CGPoint(x: 58.22, y: 71.89), controlPoint2: CGPoint(x: 60.06, y: 69.32))
         stroke65Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke65Path.lineWidth = 1.74
         stroke65Path.miterLimit = 4
         stroke65Path.lineJoinStyle = .round
@@ -3414,7 +3425,7 @@ public class StyleKit : NSObject {
         stroke67Path.addCurve(to: CGPoint(x: 88.79, y: 78.88), controlPoint1: CGPoint(x: 88.33, y: 78.21), controlPoint2: CGPoint(x: 88.56, y: 78.55))
         stroke67Path.addCurve(to: CGPoint(x: 88.09, y: 77.85), controlPoint1: CGPoint(x: 88.56, y: 78.55), controlPoint2: CGPoint(x: 88.33, y: 78.21))
         stroke67Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke67Path.lineWidth = 1.74
         stroke67Path.miterLimit = 4
         stroke67Path.lineJoinStyle = .round
@@ -3434,7 +3445,7 @@ public class StyleKit : NSObject {
         stroke69Path.addCurve(to: CGPoint(x: 85.79, y: 85.42), controlPoint1: CGPoint(x: 85.45, y: 98.73), controlPoint2: CGPoint(x: 85.79, y: 85.42))
         stroke69Path.addCurve(to: CGPoint(x: 90.03, y: 80.63), controlPoint1: CGPoint(x: 88.24, y: 83.3), controlPoint2: CGPoint(x: 87.37, y: 82.11))
         stroke69Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke69Path.lineWidth = 1.74
         stroke69Path.miterLimit = 4
         stroke69Path.lineJoinStyle = .round
@@ -3447,7 +3458,7 @@ public class StyleKit : NSObject {
         stroke71Path.addCurve(to: CGPoint(x: 88.8, y: 78.91), controlPoint1: CGPoint(x: 89.23, y: 79.53), controlPoint2: CGPoint(x: 89.02, y: 79.22))
         stroke71Path.addCurve(to: CGPoint(x: 89.44, y: 79.83), controlPoint1: CGPoint(x: 89.02, y: 79.22), controlPoint2: CGPoint(x: 89.23, y: 79.53))
         stroke71Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke71Path.lineWidth = 1.74
         stroke71Path.miterLimit = 4
         stroke71Path.lineJoinStyle = .round
@@ -3465,7 +3476,7 @@ public class StyleKit : NSObject {
         stroke73Path.addCurve(to: CGPoint(x: 103.67, y: 139.62), controlPoint1: CGPoint(x: 107.2, y: 152.72), controlPoint2: CGPoint(x: 103.92, y: 146.18))
         stroke73Path.addCurve(to: CGPoint(x: 98.13, y: 126.68), controlPoint1: CGPoint(x: 103.41, y: 133.05), controlPoint2: CGPoint(x: 98.89, y: 131.28))
         stroke73Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke73Path.lineWidth = 1.74
         stroke73Path.miterLimit = 4
         stroke73Path.lineJoinStyle = .round
@@ -3479,7 +3490,7 @@ public class StyleKit : NSObject {
         stroke75Path.addCurve(to: CGPoint(x: 89.12, y: 126.68), controlPoint1: CGPoint(x: 101.01, y: 158.66), controlPoint2: CGPoint(x: 89.6, y: 132.05))
         stroke75Path.addCurve(to: CGPoint(x: 97.26, y: 134.63), controlPoint1: CGPoint(x: 89.12, y: 126.68), controlPoint2: CGPoint(x: 95.13, y: 128.13))
         stroke75Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke75Path.lineWidth = 1.74
         stroke75Path.miterLimit = 4
         stroke75Path.lineJoinStyle = .round
@@ -3494,7 +3505,7 @@ public class StyleKit : NSObject {
         stroke77Path.addCurve(to: CGPoint(x: 42.52, y: 32.89), controlPoint1: CGPoint(x: 38.88, y: 31.64), controlPoint2: CGPoint(x: 42.52, y: 32.89))
         stroke77Path.addLine(to: CGPoint(x: 41.7, y: 22.82))
         stroke77Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke77Path.lineWidth = 1.74
         stroke77Path.miterLimit = 4
         stroke77Path.lineJoinStyle = .round
@@ -3509,7 +3520,7 @@ public class StyleKit : NSObject {
         stroke79Path.addCurve(to: CGPoint(x: 70.27, y: 32.89), controlPoint1: CGPoint(x: 73.91, y: 31.64), controlPoint2: CGPoint(x: 70.27, y: 32.89))
         stroke79Path.addLine(to: CGPoint(x: 71.08, y: 22.82))
         stroke79Path.close()
-        strokeColor.setStroke()
+        baseStroke.setStroke()
         stroke79Path.lineWidth = 1.74
         stroke79Path.miterLimit = 4
         stroke79Path.lineJoinStyle = .round
@@ -3521,54 +3532,24 @@ public class StyleKit : NSObject {
 
     //// Generated Images
 
-    @objc dynamic public class var imageOfMusclesBackCanvas: UIImage {
-        if Cache.imageOfMusclesBackCanvas != nil {
-            return Cache.imageOfMusclesBackCanvas!
-        }
-
+    @objc dynamic public class func imageOfMusclesBackCanvas(calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), glutes: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), hamstrings: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lats: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lowerBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), traps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), triceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), upperBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 317), false, 0)
-            StyleKit.drawMusclesBackCanvas()
+            StyleKit.drawMusclesBackCanvas(calves: calves, forearms: forearms, glutes: glutes, hamstrings: hamstrings, lats: lats, lowerBack: lowerBack, shoulders: shoulders, traps: traps, triceps: triceps, upperBack: upperBack)
 
-        Cache.imageOfMusclesBackCanvas = UIGraphicsGetImageFromCurrentImageContext()!
+        let imageOfMusclesBackCanvas = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
-        return Cache.imageOfMusclesBackCanvas!
+        return imageOfMusclesBackCanvas
     }
 
-    @objc dynamic public class var imageOfMusclesFrontCanvas: UIImage {
-        if Cache.imageOfMusclesFrontCanvas != nil {
-            return Cache.imageOfMusclesFrontCanvas!
-        }
-
+    @objc dynamic public class func imageOfMusclesFrontCanvas(abs: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), biceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), chest: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), quadriceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 113, height: 318), false, 0)
-            StyleKit.drawMusclesFrontCanvas()
+            StyleKit.drawMusclesFrontCanvas(abs: abs, biceps: biceps, calves: calves, chest: chest, forearms: forearms, quadriceps: quadriceps, shoulders: shoulders)
 
-        Cache.imageOfMusclesFrontCanvas = UIGraphicsGetImageFromCurrentImageContext()!
+        let imageOfMusclesFrontCanvas = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
-        return Cache.imageOfMusclesFrontCanvas!
-    }
-
-    //// Customization Infrastructure
-
-    @objc @IBOutlet dynamic var musclesBackCanvasTargets: [AnyObject]! {
-        get { return Cache.musclesBackCanvasTargets }
-        set {
-            Cache.musclesBackCanvasTargets = newValue
-            for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfMusclesBackCanvas)
-            }
-        }
-    }
-
-    @objc @IBOutlet dynamic var musclesFrontCanvasTargets: [AnyObject]! {
-        get { return Cache.musclesFrontCanvasTargets }
-        set {
-            Cache.musclesFrontCanvasTargets = newValue
-            for target: AnyObject in newValue {
-                let _ = target.perform(NSSelectorFromString("setImage:"), with: StyleKit.imageOfMusclesFrontCanvas)
-            }
-        }
+        return imageOfMusclesFrontCanvas
     }
 
 
