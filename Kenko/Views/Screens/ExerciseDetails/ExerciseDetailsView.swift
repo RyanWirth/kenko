@@ -16,7 +16,7 @@ struct ExerciseDetailsView: View {
     
     var body: some View {
         List(items) { item in
-            MusclesFrontImageView(musclesModel: .constant(
+            MusclesIconImageView(musclesModel: .constant(
                 MusclesModel([
                     .chest: item.id % 2 == 0 ? .heavy : .light,
                     .quadriceps: .light

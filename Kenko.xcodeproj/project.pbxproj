@@ -52,6 +52,7 @@
 		44AEEAB125EB146C00BC6496 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEEAB025EB146C00BC6496 /* StyleKit.swift */; };
 		44AEEAB825EB23BD00BC6496 /* MusclesFrontImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEEAB725EB23BD00BC6496 /* MusclesFrontImageView.swift */; };
 		44AEEABB25EB23F800BC6496 /* MusclesBackImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEEABA25EB23F800BC6496 /* MusclesBackImageView.swift */; };
+		44AEEAC025EB68F000BC6496 /* MusclesIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEEABF25EB68F000BC6496 /* MusclesIconImageView.swift */; };
 		44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */; };
 		44B7B6D925D9F1B000D9E7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B6D825D9F1B000D9E7AB /* ContentView.swift */; };
 		44B7B6DB25D9F1B200D9E7AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B7B6DA25D9F1B200D9E7AB /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		44AEEAB025EB146C00BC6496 /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		44AEEAB725EB23BD00BC6496 /* MusclesFrontImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesFrontImageView.swift; sourceTree = "<group>"; };
 		44AEEABA25EB23F800BC6496 /* MusclesBackImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesBackImageView.swift; sourceTree = "<group>"; };
+		44AEEABF25EB68F000BC6496 /* MusclesIconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesIconImageView.swift; sourceTree = "<group>"; };
 		44B7B6D325D9F1B000D9E7AB /* Kenko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kenko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenkoApp.swift; sourceTree = "<group>"; };
 		44B7B6D825D9F1B000D9E7AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				44AEEAB725EB23BD00BC6496 /* MusclesFrontImageView.swift */,
 				44AEEABA25EB23F800BC6496 /* MusclesBackImageView.swift */,
+				44AEEABF25EB68F000BC6496 /* MusclesIconImageView.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				444DA00C25DCDA9A00675AF8 /* Fonts.swift in Sources */,
 				44AEEAB125EB146C00BC6496 /* StyleKit.swift in Sources */,
 				447940B125E36FC600AD547D /* StatisticsTab.swift in Sources */,
+				44AEEAC025EB68F000BC6496 /* MusclesIconImageView.swift in Sources */,
 				444D9FEF25DCD47200675AF8 /* OnboardingAdviceView.swift in Sources */,
 				4493919425DDF6F800A551AF /* RoutineModel.swift in Sources */,
 				4493919D25DE099700A551AF /* EquipmentModel.swift in Sources */,
