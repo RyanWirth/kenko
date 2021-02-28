@@ -19,7 +19,7 @@ struct ExerciseDetailsView: View {
             MusclesFrontImageView(musclesModel: .constant(
                 MusclesModel([
                     .chest: .heavy,
-                    .quads: .light
+                    .quadriceps: .light
                 ])
             ))
         }

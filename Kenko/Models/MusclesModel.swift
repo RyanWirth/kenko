@@ -25,7 +25,7 @@ struct MusclesModel: Codable {
 }
 
 enum MuscleModel: String, Codable {
-    case abs, back, biceps, calves, chest, forearms, glutes, hamstrings, neck, quads, shoulders, traps, triceps
+    case abs, biceps, calves, chest, forearms, glutes, hamstrings, lats, lowerBack, quadriceps, shoulders, traps, triceps, upperBack
 }
 
 enum IntensityModel: String, Codable {

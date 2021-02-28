@@ -17,7 +17,7 @@ struct MusclesFrontImageView: View {
             calves: UIColor(musclesModel[.calves].color),
             chest: UIColor(musclesModel[.chest].color),
             forearms: UIColor(musclesModel[.forearms].color),
-            quadriceps: UIColor(musclesModel[.quads].color),
+            quadriceps: UIColor(musclesModel[.quadriceps].color),
             shoulders: UIColor(musclesModel[.shoulders].color)
         ))
     }
