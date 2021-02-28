@@ -14,6 +14,23 @@ struct MusclesModel: Codable {
         self.data = data
     }
     
+    var focus: MuscleModel? {
+        let entries = data.sorted {
+            switch ($0.value, $1.value) {
+            case (.heavy(let severity1), .heavy(let severity2)):
+                return severity1 > severity2
+            case (.light(let severity1), .light(let severity2)):
+                return severity1 > severity2
+            case (.heavy, .light), (.light, .none):
+                return true
+            default:
+                return false
+            }
+        }
+        
+        return entries.first?.key
+    }
+    
     subscript(muscle: MuscleModel) -> IntensityModel {
         get {
             return data[muscle] ?? .none

@@ -23,7 +23,7 @@ struct MusclesIconImageView: View {
     }
     
     private var focus: MuscleModel {
-        return .abs
+        return musclesModel.focus ?? .chest
     }
     
     private var offset: CGFloat {
