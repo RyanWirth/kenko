@@ -12,8 +12,8 @@ struct ExerciseModel: Codable {
     var id: String
     var name: String
     var about: String
+    var muscles: MusclesModel
     var equipment: EquipmentModel
-    var muscles: [InvolvedMuscleModel]
 }
 
 typealias ExercisesModel = [String: ExerciseModel]

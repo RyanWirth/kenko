@@ -16,9 +16,12 @@ struct ExerciseDetailsView: View {
     
     var body: some View {
         List(items) { item in
-            MusclesFrontImageView(involvedMuscles: .constant([
-                InvolvedMuscleModel(muscle: .chest, intensity: .primary)
-            ]))
+            MusclesFrontImageView(musclesModel: .constant(
+                MusclesModel([
+                    .chest: .heavy,
+                    .quads: .light
+                ])
+            ))
         }
         .navigationTitle("Bench Press")
     }
