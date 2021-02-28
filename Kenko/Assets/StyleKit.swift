@@ -12,7 +12,7 @@ public class StyleKit : NSObject {
 
     //// Drawing Methods
 
-    @objc dynamic public class func drawMusclesBackCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 318), resizing: ResizingBehavior = .aspectFit, calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), glutes: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), hamstrings: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lats: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lowerBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), traps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), triceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), upperBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), background: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), offset: CGFloat = 1, isIcon: Bool = false) {
+    @objc dynamic public class func drawMusclesBackCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 318), resizing: ResizingBehavior = .aspectFit, calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), glutes: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), hamstrings: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lats: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lowerBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), traps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), triceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), upperBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), background: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), offset: CGFloat = -8, isIcon: Bool = true) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -1729,20 +1729,20 @@ public class StyleKit : NSObject {
 
         if (hasFadeBottom) {
             //// fadeBottom Drawing
-            let fadeBottomPath = UIBezierPath(rect: CGRect(x: 0, y: 64, width: 128, height: 64))
+            let fadeBottomPath = UIBezierPath(rect: CGRect(x: 0, y: 96, width: 128, height: 32))
             context.saveGState()
             fadeBottomPath.addClip()
-            context.drawLinearGradient(fade, start: CGPoint(x: 64, y: 128), end: CGPoint(x: 64, y: 64), options: [])
+            context.drawLinearGradient(fade, start: CGPoint(x: 64, y: 128), end: CGPoint(x: 64, y: 96), options: [])
             context.restoreGState()
         }
 
 
         if (hasFadeTop) {
             //// fadeTop Drawing
-            let fadeTopPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 128, height: 64))
+            let fadeTopPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 128, height: 32))
             context.saveGState()
             fadeTopPath.addClip()
-            context.drawLinearGradient(fade, start: CGPoint(x: 64, y: -0), end: CGPoint(x: 64, y: 64), options: [])
+            context.drawLinearGradient(fade, start: CGPoint(x: 64, y: -0), end: CGPoint(x: 64, y: 32), options: [])
             context.restoreGState()
         }
         
@@ -1750,7 +1750,7 @@ public class StyleKit : NSObject {
 
     }
 
-    @objc dynamic public class func drawMusclesFrontCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 318), resizing: ResizingBehavior = .aspectFit, abs: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), biceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), chest: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), quadriceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), background: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), offset: CGFloat = 1, isIcon: Bool = false) {
+    @objc dynamic public class func drawMusclesFrontCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 128, height: 318), resizing: ResizingBehavior = .aspectFit, abs: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), biceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), chest: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), quadriceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), background: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), offset: CGFloat = -8, isIcon: Bool = true) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -3589,20 +3589,20 @@ public class StyleKit : NSObject {
 
         if (hasFadeBottom) {
             //// fadeBottom Drawing
-            let fadeBottomPath = UIBezierPath(rect: CGRect(x: 0, y: 64, width: 128, height: 64))
+            let fadeBottomPath = UIBezierPath(rect: CGRect(x: 0, y: 96, width: 128, height: 32))
             context.saveGState()
             fadeBottomPath.addClip()
-            context.drawLinearGradient(fade, start: CGPoint(x: 64, y: 128), end: CGPoint(x: 64, y: 64), options: [])
+            context.drawLinearGradient(fade, start: CGPoint(x: 64, y: 128), end: CGPoint(x: 64, y: 96), options: [])
             context.restoreGState()
         }
 
 
         if (hasFadeTop) {
             //// fadeTop Drawing
-            let fadeTopPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 128, height: 64))
+            let fadeTopPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 128, height: 32))
             context.saveGState()
             fadeTopPath.addClip()
-            context.drawLinearGradient(fade, start: CGPoint(x: 64, y: -0), end: CGPoint(x: 64, y: 64), options: [])
+            context.drawLinearGradient(fade, start: CGPoint(x: 64, y: -0), end: CGPoint(x: 64, y: 32), options: [])
             context.restoreGState()
         }
         
@@ -3612,7 +3612,7 @@ public class StyleKit : NSObject {
 
     //// Generated Images
 
-    @objc dynamic public class func imageOfMusclesBackCanvas(calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), glutes: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), hamstrings: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lats: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lowerBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), traps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), triceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), upperBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), background: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), offset: CGFloat = 1, isIcon: Bool = false) -> UIImage {
+    @objc dynamic public class func imageOfMusclesBackCanvas(calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), glutes: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), hamstrings: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lats: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), lowerBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), traps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), triceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), upperBack: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), background: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), offset: CGFloat = -8, isIcon: Bool = true) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 318), false, 0)
             StyleKit.drawMusclesBackCanvas(calves: calves, forearms: forearms, glutes: glutes, hamstrings: hamstrings, lats: lats, lowerBack: lowerBack, shoulders: shoulders, traps: traps, triceps: triceps, upperBack: upperBack, background: background, offset: offset, isIcon: isIcon)
 
@@ -3622,7 +3622,7 @@ public class StyleKit : NSObject {
         return imageOfMusclesBackCanvas
     }
 
-    @objc dynamic public class func imageOfMusclesFrontCanvas(abs: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), biceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), chest: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), quadriceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), background: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), offset: CGFloat = 1, isIcon: Bool = false) -> UIImage {
+    @objc dynamic public class func imageOfMusclesFrontCanvas(abs: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), biceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), calves: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), chest: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), forearms: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), quadriceps: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), shoulders: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), background: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), offset: CGFloat = -8, isIcon: Bool = true) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 128, height: 318), false, 0)
             StyleKit.drawMusclesFrontCanvas(abs: abs, biceps: biceps, calves: calves, chest: chest, forearms: forearms, quadriceps: quadriceps, shoulders: shoulders, background: background, offset: offset, isIcon: isIcon)
 
