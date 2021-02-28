@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440ADEBA25EC11EB006601D7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440ADEB925EC11EB006601D7 /* Images.swift */; };
 		4414766D25DE231400340ACE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4414766C25DE231400340ACE /* Resolver */; };
 		4414767025DE236B00340ACE /* Resolver+ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */; };
 		4414767D25DE269E00340ACE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414767C25DE269E00340ACE /* OnboardingViewModel.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440ADEB925EC11EB006601D7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+ResolverRegistering.swift"; sourceTree = "<group>"; };
 		4414767C25DE269E00340ACE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		4414768225DF365000340ACE /* WeightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightModel.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				444DA00B25DCDA9A00675AF8 /* Fonts.swift */,
 				444DA01D25DCE2D600675AF8 /* Colors.swift */,
 				444DA02825DD8EC000675AF8 /* Gradients.swift */,
+				440ADEB925EC11EB006601D7 /* Images.swift */,
 				44AEEAB025EB146C00BC6496 /* StyleKit.swift */,
 				444D9FF325DCD8BA00675AF8 /* Questrial-Regular.ttf */,
 				444D9FFD25DCD8F700675AF8 /* Rubik-Light.ttf */,
@@ -411,6 +414,7 @@
 				44AEEAB825EB23BD00BC6496 /* MusclesFrontImageView.swift in Sources */,
 				4479409E25E32A9200AD547D /* StatisticsView.swift in Sources */,
 				4479409825E32A2200AD547D /* DashboardView.swift in Sources */,
+				440ADEBA25EC11EB006601D7 /* Images.swift in Sources */,
 				444DA02625DD8D5800675AF8 /* SmallButtonView.swift in Sources */,
 				447940A725E32AE200AD547D /* RootView.swift in Sources */,
 				4479409325E324FD00AD547D /* ContentViewModel.swift in Sources */,
