@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ExerciseDetailsView: View {
+    var items = (0..<100).map { i in Item(id: "\(i)") }
+    
+    struct Item: Identifiable {
+        var id: String
+    }
+
     var body: some View {
-        Image(uiImage: StyleKit.imageOfMusclesFrontCanvas())
-            .navigationTitle("Bench Press")
+        List(items) { item in
+            MusclesFrontImageView()
+        }
+        .navigationTitle("Bench Press")
     }
 }
 
