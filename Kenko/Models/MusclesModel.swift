@@ -26,4 +26,17 @@ struct MusclesModel: Codable {
 
 enum MuscleModel: String, Codable {
     case abs, biceps, calves, chest, forearms, glutes, hamstrings, lats, lowerBack, quadriceps, shoulders, traps, triceps, upperBack
+    
+    var side: Side {
+        switch self {
+        case .abs, .biceps, .chest, .forearms, .quadriceps, .shoulders:
+            return .front
+        case .calves, .glutes, .hamstrings, .lats, .lowerBack, .traps, .triceps, .upperBack:
+            return .back
+        }
+    }
+    
+    enum Side {
+        case front, back
+    }
 }

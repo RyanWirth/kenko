@@ -11,7 +11,7 @@ struct MusclesIconImageView: View {
     @Binding var musclesModel: MusclesModel
     
     var body: some View {
-        if side == .front {
+        if focus.side == .front {
             MusclesFrontImageView(musclesModel: $musclesModel, offset: offset)
                 .frame(width: 128, height: 128, alignment: .top)
                 .clipped()
@@ -24,15 +24,6 @@ struct MusclesIconImageView: View {
     
     private var focus: MuscleModel {
         return .abs
-    }
-    
-    private var side: Side {
-        switch focus {
-        case .abs, .biceps, .chest, .forearms, .quadriceps, .shoulders:
-            return .front
-        case .calves, .glutes, .hamstrings, .lats, .lowerBack, .traps, .triceps, .upperBack:
-            return .back
-        }
     }
     
     private var offset: CGFloat {
@@ -66,10 +57,6 @@ struct MusclesIconImageView: View {
         case .upperBack:
             return -14
         }
-    }
-    
-    private enum Side {
-        case front, back
     }
 }
 
