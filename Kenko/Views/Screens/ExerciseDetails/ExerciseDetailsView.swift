@@ -19,7 +19,7 @@ struct ExerciseDetailsView: View {
             MusclesIconImageView(musclesModel: .constant(
                 MusclesModel([
                     .chest: item.id % 2 == 0 ? .heavy() : .light(),
-                    .quadriceps: .light()
+                    .glutes: item.id % 2 == 0 ? .light() : .heavy()
                 ])
             ))
         }

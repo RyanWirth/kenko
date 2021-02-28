@@ -18,9 +18,9 @@ struct MusclesModel: Codable {
         let entries = data.sorted {
             switch ($0.value, $1.value) {
             case (.heavy(let severity1), .heavy(let severity2)):
-                return severity1 > severity2
+                return severity1 == severity2 ? $0.key.rawValue < $1.key.rawValue : severity1 > severity2
             case (.light(let severity1), .light(let severity2)):
-                return severity1 > severity2
+                return severity1 == severity2 ? $0.key.rawValue < $1.key.rawValue : severity1 > severity2
             case (.heavy, .light), (.light, .none):
                 return true
             default:
