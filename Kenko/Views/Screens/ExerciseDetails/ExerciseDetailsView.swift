@@ -15,7 +15,7 @@ struct ExerciseDetailsView: View {
     ])
     
     var body: some View {
-        VStack {
+        ScrollView {
             HStack {
                 MusclesFrontImageView(musclesModel: .constant(musclesModel))
                 MusclesBackImageView(musclesModel: .constant(musclesModel))
@@ -31,6 +31,7 @@ struct ExerciseDetailsView: View {
                     .foregroundColor(Colors.secondary500)
             }
         }
+        .fixFlickering()
         .navigationTitle("Bench Press")
     }
 }

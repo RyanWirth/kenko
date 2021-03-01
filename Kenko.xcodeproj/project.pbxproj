@@ -53,6 +53,7 @@
 		449391A225DE0DF300A551AF /* StaticRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449391A125DE0DF300A551AF /* StaticRepository.swift */; };
 		449E9D3025EC9755006E2E15 /* SubheadTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449E9D2F25EC9755006E2E15 /* SubheadTextView.swift */; };
 		449E9D3825EC9E40006E2E15 /* ExerciseDetailsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449E9D3725EC9E40006E2E15 /* ExerciseDetailsSectionView.swift */; };
+		449E9D4125ECA6E0006E2E15 /* ScrollView+FixFlickering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449E9D4025ECA6E0006E2E15 /* ScrollView+FixFlickering.swift */; };
 		44AEEAB125EB146C00BC6496 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEEAB025EB146C00BC6496 /* StyleKit.swift */; };
 		44AEEAB825EB23BD00BC6496 /* MusclesFrontImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEEAB725EB23BD00BC6496 /* MusclesFrontImageView.swift */; };
 		44AEEABB25EB23F800BC6496 /* MusclesBackImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEEABA25EB23F800BC6496 /* MusclesBackImageView.swift */; };
@@ -105,6 +106,7 @@
 		449391A125DE0DF300A551AF /* StaticRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticRepository.swift; sourceTree = "<group>"; };
 		449E9D2F25EC9755006E2E15 /* SubheadTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubheadTextView.swift; sourceTree = "<group>"; };
 		449E9D3725EC9E40006E2E15 /* ExerciseDetailsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsSectionView.swift; sourceTree = "<group>"; };
+		449E9D4025ECA6E0006E2E15 /* ScrollView+FixFlickering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+FixFlickering.swift"; sourceTree = "<group>"; };
 		44AEEAB025EB146C00BC6496 /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		44AEEAB725EB23BD00BC6496 /* MusclesFrontImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesFrontImageView.swift; sourceTree = "<group>"; };
 		44AEEABA25EB23F800BC6496 /* MusclesBackImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesBackImageView.swift; sourceTree = "<group>"; };
@@ -290,6 +292,14 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		449E9D3F25ECA6CC006E2E15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				449E9D4025ECA6E0006E2E15 /* ScrollView+FixFlickering.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		44AEEAB525EB238600BC6496 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +343,7 @@
 				442A2EC625DDDB2000DAEC4B /* Models */,
 				4493919F25DE0C9600A551AF /* Repositories */,
 				442A2EC725DDDB5000DAEC4B /* Views */,
+				449E9D3F25ECA6CC006E2E15 /* Extensions */,
 				44B7B6D625D9F1B000D9E7AB /* KenkoApp.swift */,
 				4414766F25DE236B00340ACE /* Resolver+ResolverRegistering.swift */,
 				44B7B6DF25D9F1B200D9E7AB /* Info.plist */,
@@ -455,6 +466,7 @@
 				447940A125E32AA700AD547D /* HistoryView.swift in Sources */,
 				447940B825E3703500AD547D /* PlansTab.swift in Sources */,
 				440ADEC325EC4282006601D7 /* IntensityModel.swift in Sources */,
+				449E9D4125ECA6E0006E2E15 /* ScrollView+FixFlickering.swift in Sources */,
 				44B7B6D725D9F1B000D9E7AB /* KenkoApp.swift in Sources */,
 				447940AB25E33F0F00AD547D /* MyWorkoutsView.swift in Sources */,
 				4472C4DE25EAFC4B00CF15E3 /* ExerciseDetailsView.swift in Sources */,
