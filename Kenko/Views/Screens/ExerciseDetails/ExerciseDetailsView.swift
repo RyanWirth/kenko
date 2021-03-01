@@ -15,9 +15,20 @@ struct ExerciseDetailsView: View {
     ])
     
     var body: some View {
-        HStack {
-            MusclesFrontImageView(musclesModel: .constant(musclesModel))
-            MusclesBackImageView(musclesModel: .constant(musclesModel))
+        VStack(alignment: .leading) {
+            HStack {
+                MusclesFrontImageView(musclesModel: .constant(musclesModel))
+                MusclesBackImageView(musclesModel: .constant(musclesModel))
+            }
+            
+            Divider()
+            SubheadTextView("Muscles Involved")
+            
+            Divider()
+            SubheadTextView("About")
+            Text("The bench press is a basic upper body strength training exercise that consists of pressing a weight upwards from a supine position. The exercise works the pectoralis major as well as supporting chest, arm, and shoulder muscles such as the anterior deltoids, serratus anterior, coracobrachialis, scapulae fixers, trapezii, and the triceps. A barbell is generally")
+                .font(Fonts.body)
+                .foregroundColor(Colors.secondary500)
         }
         .navigationTitle("Bench Press")
     }
