@@ -36,7 +36,7 @@ class Colors {
         case .light:
             return primary200
         case .none:
-            return primary100
+            return background
         }
     }
 }

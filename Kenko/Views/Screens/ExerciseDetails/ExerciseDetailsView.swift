@@ -8,20 +8,16 @@
 import SwiftUI
 
 struct ExerciseDetailsView: View {
-    var items = (0..<3000).map { i in Item(id: i) }
-    
-    struct Item: Identifiable {
-        var id: Int
-    }
+    var musclesModel = MusclesModel([
+        .chest: .heavy(),
+        .triceps: .light(),
+        .shoulders: .light()
+    ])
     
     var body: some View {
-        List(items) { item in
-            MusclesIconImageView(musclesModel: .constant(
-                MusclesModel([
-                    .chest: item.id % 2 == 0 ? .heavy() : .light(),
-                    .glutes: item.id % 2 == 0 ? .light() : .heavy()
-                ])
-            ))
+        HStack {
+            MusclesFrontImageView(musclesModel: .constant(musclesModel))
+            MusclesBackImageView(musclesModel: .constant(musclesModel))
         }
         .navigationTitle("Bench Press")
     }
