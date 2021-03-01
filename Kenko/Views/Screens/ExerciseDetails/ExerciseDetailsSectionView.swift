@@ -16,7 +16,7 @@ struct ExerciseDetailsSectionView<Content>: View where Content: View {
             Divider()
             
             SubheadTextView(title)
-                .padding(.top, 24)
+                .padding(.top, 20)
                 .padding(.horizontal, 24)
             
             content()
