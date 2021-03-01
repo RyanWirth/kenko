@@ -22,13 +22,19 @@ struct ExerciseDetailsView: View {
             }
             
             ExerciseDetailsSectionView(title: "Muscles Involved") {
-                Text("// TODO")
+                BodyTextView("// TODO")
             }
             
             ExerciseDetailsSectionView(title: "About") {
-                Text("The bench press is a basic upper body strength training exercise that consists of pressing a weight upwards from a supine position. The exercise works the pectoralis major as well as supporting chest, arm, and shoulder muscles such as the anterior deltoids, serratus anterior, coracobrachialis, scapulae fixers, trapezii, and the triceps. A barbell is generally")
-                    .font(Fonts.body)
-                    .foregroundColor(Colors.secondary500)
+                BodyTextView("The bench press is a basic upper body strength training exercise that consists of pressing a weight upwards from a supine position. The exercise works the pectoralis major as well as supporting chest, arm, and shoulder muscles such as the anterior deltoids, serratus anterior, coracobrachialis, scapulae fixers, trapezii, and the triceps. A barbell is generally")
+            }
+            
+            ExerciseDetailsSectionView(title: "Instructions") {
+                BodyTextView("The bench press is a basic upper body strength training exercise that consists of pressing a weight upwards from a supine position. The exercise works the pectoralis major as well as supporting chest, arm, and shoulder muscles such as the anterior deltoids, serratus anterior, coracobrachialis, scapulae fixers, trapezii, and the triceps. A barbell is generally")
+            }
+            
+            ExerciseDetailsSectionView(title: "Tips") {
+                BodyTextView("The bench press is a basic upper body strength training exercise that consists of pressing a weight upwards from a supine position. The exercise works the pectoralis major as well as supporting chest, arm, and shoulder muscles such as the anterior deltoids, serratus anterior, coracobrachialis, scapulae fixers, trapezii, and the triceps. A barbell is generally")
             }
         }
         .fixFlickering()
