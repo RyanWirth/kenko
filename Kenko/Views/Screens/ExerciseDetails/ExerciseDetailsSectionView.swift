@@ -14,8 +14,14 @@ struct ExerciseDetailsSectionView<Content>: View where Content: View {
     var body: some View {
         VStack(alignment: .leading) {
             Divider()
+            
             SubheadTextView(title)
+                .padding(.top, 24)
+                .padding(.horizontal, 24)
+            
             content()
+                .padding(.top, 2)
+                .padding(.horizontal, 24)
         }
     }
 }
